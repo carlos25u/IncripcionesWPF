@@ -12,6 +12,7 @@ namespace IncripcionesWPF.DAL
     {
         public DbSet<Estudiantes> Estudiantes { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite(@"Data Source = DATA\Incripciones.db");
