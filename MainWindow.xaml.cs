@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IncripcionesWPF.UI.Registros;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,27 @@ namespace IncripcionesWPF
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void RegistroUsuarioMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RegistroEstudianteMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            rEstudiantes registroEstudiantes = new rEstudiantes();
+            registroEstudiantes.Show();
+        }
+
+        private void ConsultasUsuarioMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ConsultasEstudianteMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

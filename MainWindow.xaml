@@ -5,8 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IncripcionesWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Icon="/Resources/Inscripcion.ico"
+        Title="Menu Principal" Height="300" Width="600">
     <Grid>
+        <StackPanel Orientation="Vertical">
+            <Menu Height="18">
+                <MenuItem Header="Registros">
+                    <MenuItem Header="Usuarios" x:Name="RegistroUsuarioMenuItem" Click="RegistroUsuarioMenuItem_Click"></MenuItem>
+                    <MenuItem Header="Estudiantes" x:Name="RegistroEstudianteMenuItem" Click="RegistroEstudianteMenuItem_Click"></MenuItem>
+                </MenuItem>
 
+                <MenuItem Header="Consultas">
+                    <MenuItem Header="Usuarios" x:Name="ConsultasUsuarioMenuItem" Click="ConsultasUsuarioMenuItem_Click"></MenuItem>
+                    <MenuItem Header="Estudiantes" x:Name="ConsultasEstudianteMenuItem" Click="ConsultasEstudianteMenuItem_Click"></MenuItem>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
     </Grid>
 </Window>
