@@ -28,7 +28,8 @@ namespace IncripcionesWPF
 
         private void RegistroUsuarioMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            rUsuarios usuario = new rUsuarios();
+            usuario.Show();
         }
 
         private void RegistroEstudianteMenuItem_Click(object sender, RoutedEventArgs e)
