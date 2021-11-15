@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="PasswordHelper\**" />
+    <EmbeddedResource Remove="PasswordHelper\**" />
+    <None Remove="PasswordHelper\**" />
+    <Page Remove="PasswordHelper\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Resources\Agregar.png" />
     <None Remove="Resources\Buscar.png" />
     <None Remove="Resources\Eliminar.png" />
@@ -39,10 +46,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-
   <ItemGroup>
     <Folder Include="DATA\" />
-    <Folder Include="PasswordHelper\" />
+
   </ItemGroup>
 
   <ItemGroup>

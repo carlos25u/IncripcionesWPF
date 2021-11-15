@@ -47,7 +47,8 @@ namespace IncripcionesWPF
 
         private void ConsultasEstudianteMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            cEstudiantes ConsultasEstudiantes = new cEstudiantes();
+            ConsultasEstudiantes.Show();
         }
     }
 }
