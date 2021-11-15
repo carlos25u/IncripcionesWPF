@@ -42,6 +42,7 @@
 
   <ItemGroup>
     <Folder Include="DATA\" />
+    <Folder Include="PasswordHelper\" />
     <Folder Include="UI\Consultas\" />
   </ItemGroup>
 
