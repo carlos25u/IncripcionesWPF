@@ -50,5 +50,45 @@ namespace IncripcionesWPF
             cEstudiantes ConsultasEstudiantes = new cEstudiantes();
             ConsultasEstudiantes.Show();
         }
+
+        private void RegistroProfesoresMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RegistroCursosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RegistroCarrerasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RegistroMateriasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ConsultasProfesoresMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ConsultasCursosMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ConsultasCarrerasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ConsultasMateriasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
