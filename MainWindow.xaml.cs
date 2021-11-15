@@ -1,4 +1,5 @@
-﻿using IncripcionesWPF.UI.Registros;
+﻿using IncripcionesWPF.UI.Consultas;
+using IncripcionesWPF.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,7 +41,8 @@ namespace IncripcionesWPF
 
         private void ConsultasUsuarioMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            cUsuarios usuarios = new cUsuarios();
+            usuarios.Show();
         }
 
         private void ConsultasEstudianteMenuItem_Click(object sender, RoutedEventArgs e)
