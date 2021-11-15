@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace IncripcionesWPF.Migrations
 {
-    [DbContext(typeof(Contextos))]
+    [DbContext(typeof(Contexto))]
     [Migration("20211115180522_Migracion_Inicial")]
     partial class Migracion_Inicial
     {

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace IncripcionesWPF.DAL
 {
-    class Contextos : DbContext
+    class Contexto : DbContext
     {
         public DbSet<Estudiantes> Estudiantes { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }

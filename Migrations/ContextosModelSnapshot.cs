@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace IncripcionesWPF.Migrations
 {
-    [DbContext(typeof(Contextos))]
+    [DbContext(typeof(Contexto))]
     partial class ContextosModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
