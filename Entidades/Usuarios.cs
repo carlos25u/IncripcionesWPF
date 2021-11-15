@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IncripcionesWPF.Entidades
 {
-    public class Usurarios
+    public class Usuarios
     {
         public int UsuariosId { get; set; }
         public string Nombre { get; set; }
