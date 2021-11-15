@@ -13,11 +13,19 @@
                 <MenuItem Header="Registros">
                     <MenuItem Header="Usuarios" x:Name="RegistroUsuarioMenuItem" Click="RegistroUsuarioMenuItem_Click"></MenuItem>
                     <MenuItem Header="Estudiantes" x:Name="RegistroEstudianteMenuItem" Click="RegistroEstudianteMenuItem_Click"></MenuItem>
+                    <MenuItem Header="Profesores" x:Name="RegistroProfesoresMenuItem" Click="RegistroProfesoresMenuItem_Click"></MenuItem>
+                    <MenuItem Header="Cursos" x:Name="RegistroCursosMenuItem" Click="RegistroCursosMenuItem_Click"></MenuItem>
+                    <MenuItem Header="Carreras" x:Name="RegistroCarrerasMenuItem" Click="RegistroCarrerasMenuItem_Click"></MenuItem>
+                    <MenuItem Header="Materias" x:Name="RegistroMateriasMenuItem" Click="RegistroMateriasMenuItem_Click"></MenuItem>
                 </MenuItem>
 
                 <MenuItem Header="Consultas">
                     <MenuItem Header="Usuarios" x:Name="ConsultasUsuarioMenuItem" Click="ConsultasUsuarioMenuItem_Click"></MenuItem>
                     <MenuItem Header="Estudiantes" x:Name="ConsultasEstudianteMenuItem" Click="ConsultasEstudianteMenuItem_Click"></MenuItem>
+                    <MenuItem Header="Profesores" x:Name="ConsultasProfesoresMenuItem" Click="ConsultasProfesoresMenuItem_Click"></MenuItem>
+                    <MenuItem Header="Cursos" x:Name="ConsultasCursosMenuItem" Click="ConsultasCursosMenuItem_Click"></MenuItem>
+                    <MenuItem Header="Carreras" x:Name="ConsultasCarrerasMenuItem" Click="ConsultasCarrerasMenuItem_Click"></MenuItem>
+                    <MenuItem Header="Materias" x:Name="ConsultasMateriasMenuItem" Click="ConsultasMateriasMenuItem_Click"></MenuItem>
                 </MenuItem>
             </Menu>
         </StackPanel>
