@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IncripcionesWPF.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Estudiantes" Height="450" Width="350">
+        Title="Registro de Estudiantes" Height="480" Width="350">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
             
@@ -36,6 +36,9 @@
 
             <Label Content="Telefono"></Label>
             <TextBox x:Name="TelefonoTextBox" Text="{Binding Telefono}"></TextBox>
+
+            <Label Content="Celular"></Label>
+            <TextBox x:Name="CelularTextBox" Text="{Binding Celular}"></TextBox>
 
             <Label Content="Correo"></Label>
             <TextBox x:Name="CorreoTextBox" Text="{Binding Correo}"></TextBox>

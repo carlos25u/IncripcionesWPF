@@ -46,6 +46,7 @@
                         <DataGridTextColumn Header="Fecha Nacimiento" Binding="{Binding FechaNacimiento }"/>
                         <DataGridTextColumn Header="Direccion" Binding="{Binding Direccion}"/>
                         <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}"/>
+                        <DataGridTextColumn Header="Celular" Binding="{Binding Celular}"/>
                         <DataGridTextColumn Header="Correo" Binding="{Binding Correo}"/>
                     </DataGrid.Columns>
                 </DataGrid>
