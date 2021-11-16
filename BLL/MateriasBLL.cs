@@ -10,28 +10,28 @@ using System.Threading.Tasks;
 
 namespace IncripcionesWPF.BLL
 {
-    public class UsuariosBLL
+    public class MateriasBLL
     {
-        public static bool Guardar(Materias usuario)
+        public static bool Guardar(Materias materia)
         {
-            if (!Existe(usuario.UsuariosId))
+            if (!Existe(materia.MateriaId))
             {
-                return Insertar(usuario);
+                return Insertar(materia);
             }
             else
             {
-                return Modificar(usuario);
+                return Modificar(materia);
             }
         }
 
-        private static bool Insertar(Materias usuario)
+        private static bool Insertar(Materias materia)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
 
             try
             {
-                contexto.Usuarios.Add(usuario);
+                contexto.Materias.Add(materia);
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
@@ -44,7 +44,7 @@ namespace IncripcionesWPF.BLL
             }
             return paso;
         }
-        private static bool Modificar(Materias usuario)
+        private static bool Modificar(Materias materia)
         {
 
             bool paso = false;
@@ -52,7 +52,7 @@ namespace IncripcionesWPF.BLL
 
             try
             {
-                contexto.Entry(usuario).State = EntityState.Modified;
+                contexto.Entry(materia).State = EntityState.Modified;
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
@@ -72,10 +72,10 @@ namespace IncripcionesWPF.BLL
 
             try
             {
-                var usuario = contexto.Usuarios.Find(id);
-                if (usuario != null)
+                var materia = contexto.Materias.Find(id);
+                if (materia != null)
                 {
-                    contexto.Usuarios.Remove(usuario);
+                    contexto.Materias.Remove(materia);
                     paso = contexto.SaveChanges() > 0;
                 }
             }
@@ -92,11 +92,11 @@ namespace IncripcionesWPF.BLL
         public static Materias Buscar(int id)
         {
             Contexto contexto = new Contexto();
-            Materias usuario;
+            Materias materia;
 
             try
             {
-                usuario = contexto.Usuarios.Find(id);
+                materia = contexto.Materias.Find(id);
             }
             catch (Exception)
             {
@@ -106,7 +106,7 @@ namespace IncripcionesWPF.BLL
             {
                 contexto.Dispose();
             }
-            return usuario;
+            return materia;
         }
 
         private static bool Existe(int id)
@@ -116,7 +116,7 @@ namespace IncripcionesWPF.BLL
 
             try
             {
-                encontrado = contexto.Usuarios.Any(e => e.UsuariosId == id);
+                encontrado = contexto.Materias.Any(e => e.MateriaId == id);
             }
             catch (Exception)
             {
@@ -136,7 +136,7 @@ namespace IncripcionesWPF.BLL
 
             try
             {
-                lista = contexto.Usuarios.ToList();
+                lista = contexto.Materias.ToList();
             }
             catch (Exception)
             {
@@ -154,7 +154,7 @@ namespace IncripcionesWPF.BLL
             Contexto contexto = new Contexto();
             try
             {
-                lista = contexto.Usuarios.Where(criterio).ToList();
+                lista = contexto.Materias.Where(criterio).ToList();
             }
             catch (Exception)
             {

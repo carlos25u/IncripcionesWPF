@@ -28,7 +28,7 @@ namespace IncripcionesWPF.UI.Consultas
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var listado = new List<Usuarios>();
+            var listado = new List<Materias>();
             if (CriterioTextBox.Text.Trim().Length > 0)
             {
                 switch (FiltroComboBox.SelectedIndex)
