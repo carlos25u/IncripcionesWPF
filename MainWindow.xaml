@@ -16,7 +16,7 @@
                     <MenuItem Header="Incripciones" x:Name="RegistroIncripcionMenuItem" Click="RegistroIncripcionMenuItem_Click"></MenuItem>
                     <MenuItem Header="Profesores" x:Name="RegistroProfesoresMenuItem" Click="RegistroProfesoresMenuItem_Click"></MenuItem>
                     <MenuItem Header="Cursos" x:Name="RegistroCursosMenuItem" Click="RegistroCursosMenuItem_Click"></MenuItem>
-                    <MenuItem Header="Areas" x:Name="RegistroCarrerasMenuItem" Click="RegistroCarrerasMenuItem_Click"></MenuItem>
+                    <MenuItem Header="Areas" x:Name="RegistroAreasMenuItem" Click="RegistroAreasMenuItem_Click" ></MenuItem>
                     <MenuItem Header="Materias" x:Name="RegistroMateriasMenuItem" Click="RegistroMateriasMenuItem_Click"></MenuItem>
                     <MenuItem Header="Roles" x:Name="RegistroRolesMenuItem" Click="RegistroRolesMenuItem_Click"></MenuItem>
                 </MenuItem>
@@ -27,7 +27,7 @@
                     <MenuItem Header="Incripciones" x:Name="ConsultasIncripcionMenuItem" Click="ConsultasIncripcionMenuItem_Click"></MenuItem>
                     <MenuItem Header="Profesores" x:Name="ConsultasProfesoresMenuItem" Click="ConsultasProfesoresMenuItem_Click"></MenuItem>
                     <MenuItem Header="Cursos" x:Name="ConsultasCursosMenuItem" Click="ConsultasCursosMenuItem_Click"></MenuItem>
-                    <MenuItem Header="Areas" x:Name="ConsultasCarrerasMenuItem" Click="ConsultasCarrerasMenuItem_Click"></MenuItem>
+                    <MenuItem Header="Areas" x:Name="ConsultasAreasMenuItem" Click="ConsultasAreasMenuItem_Click"></MenuItem>
                     <MenuItem Header="Materias" x:Name="ConsultasMateriasMenuItem" Click="ConsultasMateriasMenuItem_Click"></MenuItem>
                     <MenuItem Header="Roles" x:Name="ConsultasRolesMenuItem" Click="ConsultasRolesMenuItem_Click"></MenuItem>
                 </MenuItem>

@@ -61,11 +61,6 @@ namespace IncripcionesWPF
 
         }
 
-        private void RegistroCarrerasMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void RegistroMateriasMenuItem_Click(object sender, RoutedEventArgs e)
         {
             rMaterias materias = new rMaterias();
@@ -82,10 +77,6 @@ namespace IncripcionesWPF
 
         }
 
-        private void ConsultasCarrerasMenuItem_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void ConsultasMateriasMenuItem_Click(object sender, RoutedEventArgs e)
         {
@@ -113,6 +104,16 @@ namespace IncripcionesWPF
         {
             cRoles consultasRoles = new cRoles();
             consultasRoles.Show();
+        }
+
+        private void RegistroAreasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ConsultasAreasMenuItem_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
