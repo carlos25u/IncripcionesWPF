@@ -111,7 +111,8 @@ namespace IncripcionesWPF
 
         private void ConsultasRolesMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            cRoles consultasRoles = new cRoles();
+            consultasRoles.Show();
         }
     }
 }
