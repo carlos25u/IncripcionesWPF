@@ -45,6 +45,7 @@ namespace IncripcionesWPF.Migrations
                     FechaNacimiento = table.Column<DateTime>(type: "TEXT", nullable: false),
                     Direccion = table.Column<string>(type: "TEXT", nullable: true),
                     Telefono = table.Column<string>(type: "TEXT", nullable: true),
+                    Celular = table.Column<string>(type: "TEXT", nullable: true),
                     Correo = table.Column<string>(type: "TEXT", nullable: true)
                 },
                 constraints: table =>
@@ -89,6 +90,7 @@ namespace IncripcionesWPF.Migrations
                     Apellidos = table.Column<string>(type: "TEXT", nullable: true),
                     Direccion = table.Column<string>(type: "TEXT", nullable: true),
                     Telefono = table.Column<string>(type: "TEXT", nullable: true),
+                    Celular = table.Column<string>(type: "TEXT", nullable: true),
                     AreaId = table.Column<int>(type: "INTEGER", nullable: false),
                     FechaNacimiento = table.Column<DateTime>(type: "TEXT", nullable: false),
                     FechaIngreso = table.Column<DateTime>(type: "TEXT", nullable: false),
@@ -195,7 +197,7 @@ namespace IncripcionesWPF.Migrations
             migrationBuilder.InsertData(
                 table: "Usuarios",
                 columns: new[] { "UsuariosId", "Apellido", "Clave", "FechaCreacion", "Nombre", "NombreUsuario", "RolId" },
-                values: new object[] { 1, "Solorin", "1234", new DateTime(2021, 11, 16, 11, 23, 32, 454, DateTimeKind.Local).AddTicks(6445), "Carlos", "Admin", 1 });
+                values: new object[] { 1, "Solorin", "1234", new DateTime(2021, 11, 16, 11, 28, 4, 723, DateTimeKind.Local).AddTicks(5812), "Carlos", "Admin", 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Incripciones_CursoId",

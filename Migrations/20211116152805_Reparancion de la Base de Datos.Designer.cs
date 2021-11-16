@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IncripcionesWPF.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20211116152332_Reparancion de la Base de Datos")]
+    [Migration("20211116152805_Reparancion de la Base de Datos")]
     partial class ReparanciondelaBasedeDatos
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -56,6 +56,9 @@ namespace IncripcionesWPF.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Apellido")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Celular")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Correo")
@@ -130,6 +133,9 @@ namespace IncripcionesWPF.Migrations
 
                     b.Property<int>("AreaId")
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Celular")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("Correo")
                         .HasColumnType("TEXT");
@@ -239,7 +245,7 @@ namespace IncripcionesWPF.Migrations
                             UsuariosId = 1,
                             Apellido = "Solorin",
                             Clave = "1234",
-                            FechaCreacion = new DateTime(2021, 11, 16, 11, 23, 32, 454, DateTimeKind.Local).AddTicks(6445),
+                            FechaCreacion = new DateTime(2021, 11, 16, 11, 28, 4, 723, DateTimeKind.Local).AddTicks(5812),
                             Nombre = "Carlos",
                             NombreUsuario = "Admin",
                             RolId = 1

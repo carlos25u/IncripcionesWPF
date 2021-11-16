@@ -16,6 +16,7 @@ namespace IncripcionesWPF.Entidades
         public String Apellidos { get; set; }
         public String Direccion { get; set; }
         public String Telefono { get; set; }
+        public String Celular { get; set; }
         public int AreaId { get; set; }
         public DateTime FechaNacimiento { get; set; }
         public DateTime FechaIngreso { get; set; }

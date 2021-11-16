@@ -16,6 +16,7 @@ namespace IncripcionesWPF.Entidades
         public DateTime FechaNacimiento { get; set; } = DateTime.Now;
         public String Direccion { get; set; }
         public String Telefono { get; set; }
+        public String Celular { get; set; }
         public String Correo { get; set; }
 
     }
