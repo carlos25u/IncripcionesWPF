@@ -104,7 +104,8 @@ namespace IncripcionesWPF
 
         private void RegistroRolesMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            rRoles registroRoles = new rRoles();
+            registroRoles.Show();
         }
 
         private void ConsultasRolesMenuItem_Click(object sender, RoutedEventArgs e)
