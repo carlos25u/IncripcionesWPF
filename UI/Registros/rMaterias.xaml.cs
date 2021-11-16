@@ -73,6 +73,9 @@ namespace IncripcionesWPF.UI.Registros
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!Validar())
+                return;
+            
             var paso = MateriasBLL.Guardar(this.materias);
             if (paso)
             {
