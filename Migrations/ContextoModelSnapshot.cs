@@ -209,7 +209,7 @@ namespace IncripcionesWPF.Migrations
 
             modelBuilder.Entity("IncripcionesWPF.Entidades.Usuarios", b =>
                 {
-                    b.Property<int>("UsuariosId")
+                    b.Property<int>("UsuarioId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
@@ -231,7 +231,7 @@ namespace IncripcionesWPF.Migrations
                     b.Property<int>("RolId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("UsuariosId");
+                    b.HasKey("UsuarioId");
 
                     b.HasIndex("RolId");
 
@@ -240,10 +240,10 @@ namespace IncripcionesWPF.Migrations
                     b.HasData(
                         new
                         {
-                            UsuariosId = 1,
+                            UsuarioId = 1,
                             Apellido = "Solorin",
                             Clave = "1234",
-                            FechaCreacion = new DateTime(2021, 11, 16, 11, 28, 4, 723, DateTimeKind.Local).AddTicks(5812),
+                            FechaCreacion = new DateTime(2021, 11, 16, 16, 1, 33, 320, DateTimeKind.Local).AddTicks(4207),
                             Nombre = "Carlos",
                             NombreUsuario = "Admin",
                             RolId = 1

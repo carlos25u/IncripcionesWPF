@@ -61,7 +61,7 @@
 
   <ItemGroup>
     <None Update="DATA\incripciones.db">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

@@ -12,9 +12,9 @@ namespace IncripcionesWPF.BLL
 {
     public class UsuariosBLL
     {
-        public static bool Guardar(Materias usuario)
+        public static bool Guardar(Usuarios usuario)
         {
-            if (!Existe(usuario.UsuariosId))
+            if (!Existe(usuario.UsuarioId))
             {
                 return Insertar(usuario);
             }
@@ -24,7 +24,7 @@ namespace IncripcionesWPF.BLL
             }
         }
 
-        private static bool Insertar(Materias usuario)
+        private static bool Insertar(Usuarios usuario)
         {
             bool paso = false;
             Contexto contexto = new Contexto();
@@ -44,7 +44,7 @@ namespace IncripcionesWPF.BLL
             }
             return paso;
         }
-        private static bool Modificar(Materias usuario)
+        private static bool Modificar(Usuarios usuario)
         {
 
             bool paso = false;
@@ -89,10 +89,10 @@ namespace IncripcionesWPF.BLL
             }
             return paso;
         }
-        public static Materias Buscar(int id)
+        public static Usuarios Buscar(int id)
         {
             Contexto contexto = new Contexto();
-            Materias usuario;
+            Usuarios usuario;
 
             try
             {
@@ -116,7 +116,7 @@ namespace IncripcionesWPF.BLL
 
             try
             {
-                encontrado = contexto.Usuarios.Any(e => e.UsuariosId == id);
+                encontrado = contexto.Usuarios.Any(e => e.UsuarioId == id);
             }
             catch (Exception)
             {
@@ -129,9 +129,9 @@ namespace IncripcionesWPF.BLL
             return encontrado;
         }
 
-        public static List<Materias> GetList()
+        public static List<Usuarios> GetList()
         {
-            List<Materias> lista = new List<Materias>();
+            List<Usuarios> lista = new List<Usuarios>();
             Contexto contexto = new Contexto();
 
             try
@@ -148,9 +148,9 @@ namespace IncripcionesWPF.BLL
             }
             return lista;
         }
-        public static List<Materias> GetList(Expression<Func<Materias, bool>> criterio)
+        public static List<Usuarios> GetList(Expression<Func<Usuarios, bool>> criterio)
         {
-            List<Materias> lista = new List<Materias>();
+            List<Usuarios> lista = new List<Usuarios>();
             Contexto contexto = new Contexto();
             try
             {
