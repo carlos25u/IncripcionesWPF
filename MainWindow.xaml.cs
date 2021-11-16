@@ -114,7 +114,8 @@ namespace IncripcionesWPF
 
         private void ConsultasAreasMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            cAreas areas = new cAreas();
+            areas.Show();
         }
     }
 }
