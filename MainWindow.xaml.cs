@@ -68,7 +68,8 @@ namespace IncripcionesWPF
 
         private void RegistroMateriasMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            rMaterias materias = new rMaterias();
+            materias.Show();
         }
 
         private void ConsultasProfesoresMenuItem_Click(object sender, RoutedEventArgs e)

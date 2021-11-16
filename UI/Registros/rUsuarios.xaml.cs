@@ -21,7 +21,7 @@ namespace IncripcionesWPF.UI.Registros
     /// </summary>
     public partial class rUsuarios : Window
     {
-        private Materias Usuario = new Materias();
+        private Usuarios Usuario = new Usuarios();
         public rUsuarios()
         {
             InitializeComponent();
@@ -73,7 +73,7 @@ namespace IncripcionesWPF.UI.Registros
     
         public void Limpiar()
         {
-            this.Usuario = new Materias();
+            this.Usuario = new Usuarios();
             this.DataContext = Usuario;
         }
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
@@ -85,7 +85,7 @@ namespace IncripcionesWPF.UI.Registros
             }
             else
             {
-                this.Usuario = new Materias();
+                this.Usuario = new Usuarios();
                 MessageBox.Show("No se ha encontrado", "Error", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             this.DataContext = this.Usuario;

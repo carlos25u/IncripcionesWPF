@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace IncripcionesWPF.Migrations
 {
-    public partial class ReparanciondelaBasedeDatos : Migration
+    public partial class Arreglandobasededatos : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -138,7 +138,7 @@ namespace IncripcionesWPF.Migrations
                 name: "Usuarios",
                 columns: table => new
                 {
-                    UsuariosId = table.Column<int>(type: "INTEGER", nullable: false)
+                    UsuarioId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Nombre = table.Column<string>(type: "TEXT", nullable: true),
                     Apellido = table.Column<string>(type: "TEXT", nullable: true),
@@ -149,7 +149,7 @@ namespace IncripcionesWPF.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Usuarios", x => x.UsuariosId);
+                    table.PrimaryKey("PK_Usuarios", x => x.UsuarioId);
                     table.ForeignKey(
                         name: "FK_Usuarios_Roles_RolId",
                         column: x => x.RolId,
@@ -196,8 +196,8 @@ namespace IncripcionesWPF.Migrations
 
             migrationBuilder.InsertData(
                 table: "Usuarios",
-                columns: new[] { "UsuariosId", "Apellido", "Clave", "FechaCreacion", "Nombre", "NombreUsuario", "RolId" },
-                values: new object[] { 1, "Solorin", "1234", new DateTime(2021, 11, 16, 11, 28, 4, 723, DateTimeKind.Local).AddTicks(5812), "Carlos", "Admin", 1 });
+                columns: new[] { "UsuarioId", "Apellido", "Clave", "FechaCreacion", "Nombre", "NombreUsuario", "RolId" },
+                values: new object[] { 1, "Solorin", "1234", new DateTime(2021, 11, 16, 16, 1, 33, 320, DateTimeKind.Local).AddTicks(4207), "Carlos", "Admin", 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Incripciones_CursoId",

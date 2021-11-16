@@ -11,7 +11,7 @@ namespace IncripcionesWPF.DAL
     class Contexto : DbContext
     {
         public DbSet<Estudiantes> Estudiantes { get; set; }
-        public DbSet<Materias> Usuarios { get; set; }
+        public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Roles> Roles { get; set; }
         public DbSet<Incripciones> Incripciones { get; set; }
         public DbSet<Profesores> Profesores { get; set; }
@@ -43,9 +43,9 @@ namespace IncripcionesWPF.DAL
            );
 
 
-            modelBuilder.Entity<Materias>().HasData(new Materias
+            modelBuilder.Entity<Usuarios>().HasData(new Usuarios
             {
-                UsuariosId = 1,
+                UsuarioId = 1,
                 Nombre = "Carlos",
                 Apellido = "Solorin",
                 NombreUsuario = "Admin",

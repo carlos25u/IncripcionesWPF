@@ -1,5 +1,6 @@
 ﻿using IncripcionesWPF.BLL;
 using IncripcionesWPF.Entidades;
+using IncripcionesWPF.UI.Registros;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace IncripcionesWPF.UI.Consultas
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
-            var listado = new List<Materias>();
+            var listado = new List<Usuarios>();
             if (CriterioTextBox.Text.Trim().Length > 0)
             {
                 switch (FiltroComboBox.SelectedIndex)
@@ -43,7 +44,7 @@ namespace IncripcionesWPF.UI.Consultas
                         listado = UsuariosBLL.GetList(e => e.NombreUsuario.ToLower().Contains(CriterioTextBox.Text.ToLower()));
                         break;
                     case 3: //UsuarioId
-                        listado = UsuariosBLL.GetList(e => e.UsuariosId == Utilidades.ToInt(CriterioTextBox.Text));
+                        listado = UsuariosBLL.GetList(e => e.UsuarioId == Utilidades.ToInt(CriterioTextBox.Text));
                         break;
                 }
             }
