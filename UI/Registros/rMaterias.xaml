@@ -10,7 +10,7 @@
         <StackPanel Orientation="Horizontal" Margin="10">
             <StackPanel Orientation="Vertical">
                 <Label Content="Materia Id"/>
-                <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
+                <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
                     <TextBox x:Name="MateriaIdTextBox" Height="20" Width="90" Text="{Binding MateriaId}"/>
                     <Button x:Name="BuscarButton" Margin="10" Click="BuscarButton_Click">
                         <StackPanel Orientation="Horizontal">
@@ -25,7 +25,7 @@
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Nombre de la materia"/>
-                    <TextBox x:Name="NombreMateriaTextBox" Height="20" Width="350" Text="{Binding NombreMateria}"/>
+                    <TextBox x:Name="NombreMateriaTextBox" Height="20" Width="350" Text="{Binding Nombre}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5, 15">
                     <Button x:Name="NuevoButton" Height="40" Width="80" Click="NuevoButton_Click" Margin="10,0">
