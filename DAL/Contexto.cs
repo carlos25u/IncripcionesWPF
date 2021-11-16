@@ -13,27 +13,21 @@ namespace IncripcionesWPF.DAL
         public DbSet<Estudiantes> Estudiantes { get; set; }
         public DbSet<Usuarios> Usuarios { get; set; }
         public DbSet<Roles> Roles { get; set; }
+        public DbSet<Incripciones> Incripciones { get; set; }
+        public DbSet<Profesores> Profesores { get; set; }
+        public DbSet<Cursos> Cursos { get; set; }
+        public DbSet<Materias> Materias { get; set; }
+        public DbSet<Areas> Areas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite(@"Data Source = DATA\Incripciones.db");
+            optionsBuilder.UseSqlite(@"Data Source = DATA\incripciones.db");
 
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Usuarios>().HasData(new Usuarios
-            {
-                UsuariosId = 1,
-                Nombre = "Carlos",
-                Apellido = "Solorin",
-                NombreUsuario = "Admin",
-                Clave = "1234",
-                FechaCreacion = DateTime.Now
-
-            }
-            );
-
+        { 
+            
             modelBuilder.Entity<Roles>().HasData(new Roles
             {
               RolId = 1,
@@ -47,6 +41,21 @@ namespace IncripcionesWPF.DAL
                 Descripcion = "Secretaria"
             }
            );
+
+
+            modelBuilder.Entity<Usuarios>().HasData(new Usuarios
+            {
+                UsuariosId = 1,
+                Nombre = "Carlos",
+                Apellido = "Solorin",
+                NombreUsuario = "Admin",
+                Clave = "1234",
+                FechaCreacion = DateTime.Now,
+                RolId = 1
+            }
+            );
+
+          
         }
     }
 }

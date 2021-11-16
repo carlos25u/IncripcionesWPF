@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,5 +20,12 @@ namespace IncripcionesWPF.Entidades
         public DateTime FechaNacimiento { get; set; }
         public DateTime FechaIngreso { get; set; }
         public String Correo { get; set; }
+
+        [ForeignKey("ProfesorId")]
+        public List<ProfesoresDetalle> Detalle { get; set; } = new List<ProfesoresDetalle>();
+
+        [ForeignKey("AreaId")]
+        public Areas Areas { get; set; }
+
     }
 }

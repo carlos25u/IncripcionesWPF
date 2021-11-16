@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IncripcionesWPF.Entidades
 {
-    class Roles
+   public class Roles
     {
         [Key]
         public int RolId { get; set; }
