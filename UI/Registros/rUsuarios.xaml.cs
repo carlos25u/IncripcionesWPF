@@ -21,12 +21,15 @@ namespace IncripcionesWPF.UI.Registros
     /// </summary>
     public partial class rUsuarios : Window
     {
-        private Usuarios Usuario = new Usuarios();
+        private Materias Usuario = new Materias();
         public rUsuarios()
         {
             InitializeComponent();
             this.DataContext = Usuario;
 
+            UsuarioCombobox.ItemsSource = RolesBLL.GetRoles();
+            UsuarioCombobox.SelectedValuePath = "RolId";
+            UsuarioCombobox.DisplayMemberPath = "Descripcion";
         }
         private bool Validar()
         {
@@ -70,7 +73,7 @@ namespace IncripcionesWPF.UI.Registros
     
         public void Limpiar()
         {
-            this.Usuario = new Usuarios();
+            this.Usuario = new Materias();
             this.DataContext = Usuario;
         }
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
@@ -82,7 +85,7 @@ namespace IncripcionesWPF.UI.Registros
             }
             else
             {
-                this.Usuario = new Usuarios();
+                this.Usuario = new Materias();
                 MessageBox.Show("No se ha encontrado", "Error", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             this.DataContext = this.Usuario;
