@@ -53,6 +53,12 @@ namespace IncripcionesWPF.BLL
             try
             {
                 contexto.Cursos.Add(curso);
+
+                foreach (var item in curso.Detalle)
+                {
+                    contexto.Entry(item).State = EntityState.Added;
+                    contexto.Entry(item.Materias).State = EntityState.Modified;
+                }
                 paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
@@ -65,7 +71,6 @@ namespace IncripcionesWPF.BLL
             }
 
             return paso;
-
         }
         public static bool Modificar(Cursos curso)
         {
@@ -74,6 +79,20 @@ namespace IncripcionesWPF.BLL
 
             try
             {
+                var proyectoAnterior = contexto.Cursos
+                    .Where(x => x.CursoId == curso.CursoId)
+                    .Include(x => x.Detalle)
+                    .ThenInclude(x => x.Materias)
+                    .AsNoTracking()
+                    .SingleOrDefault();
+
+                contexto.Database.ExecuteSqlRaw($"DELETE FROM CursosDetalle Where CursoId = {curso.CursoId}");
+                foreach(var anterior in curso.Detalle)
+                {
+                    contexto.Entry(anterior).State = EntityState.Added;
+                    contexto.Entry(anterior.Materias).State = EntityState.Modified;
+
+                }
                 contexto.Entry(curso).State = EntityState.Modified;
                 paso = contexto.SaveChanges() > 0;
             }
@@ -97,12 +116,13 @@ namespace IncripcionesWPF.BLL
             try
             {
                 var curso = contexto.Cursos.Find(id);
-
-                if (curso != null)
+                foreach (var item in curso.Detalle)
                 {
-                    contexto.Cursos.Remove(curso);
-                    paso = contexto.SaveChanges() > 0;
+                    contexto.Entry(item.Cursos).State = EntityState.Modified;
+                    contexto.Entry(item.Materias).State = EntityState.Modified;
                 }
+                contexto.Entry(curso).State = EntityState.Deleted;
+                paso = contexto.SaveChanges() > 0;
             }
             catch (Exception)
             {
@@ -122,8 +142,11 @@ namespace IncripcionesWPF.BLL
 
             try
             {
-                curso = contexto.Cursos.Find(id);
-
+                curso = contexto.Cursos.Include(x => x.Detalle)
+                    .Where(x => x.CursoId == id)
+                    .Include(x => x.Detalle)
+                    .ThenInclude(x => x.Materias)
+                    .SingleOrDefault();
             }
             catch (Exception)
             {
