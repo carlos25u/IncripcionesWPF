@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IncripcionesWPF.Entidades
 {
-    public class Materias
+    class Materias
     {
         [Key]
         public int MateriaId { get; set; }

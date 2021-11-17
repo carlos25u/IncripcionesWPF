@@ -16,6 +16,6 @@ namespace IncripcionesWPF.Entidades
         public String Nombre { get; set; }
 
         [ForeignKey("CursoId")]
-        public List<Cursos> Detalle { get; set; } = new List<Cursos>();
+        public List<CursosDetalle> Detalle { get; set; } = new List<CursosDetalle>();
     }
 }

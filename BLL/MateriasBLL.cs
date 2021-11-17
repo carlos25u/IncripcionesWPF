@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace IncripcionesWPF.BLL
 {
-    public class MateriasBLL
+     class MateriasBLL
     {
         public static bool Guardar(Materias materia)
         {
