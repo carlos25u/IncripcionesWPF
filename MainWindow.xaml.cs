@@ -90,7 +90,8 @@ namespace IncripcionesWPF
 
         private void RegistroIncripcionMenuItem_Click(object sender, RoutedEventArgs e)
         {
-
+            rIncripciones registrosIncripciones = new rIncripciones();
+            registrosIncripciones.Show();
         }
 
         private void ConsultasIncripcionMenuItem_Click(object sender, RoutedEventArgs e)

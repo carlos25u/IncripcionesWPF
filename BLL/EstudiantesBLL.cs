@@ -157,7 +157,7 @@ namespace IncripcionesWPF.BLL
             return lista;
         }
 
-        public static List<Estudiantes> GetAportes()
+        public static List<Estudiantes> GetEstudiantes()
         {
             List<Estudiantes> lista = new List<Estudiantes>();
             Contexto contexto = new Contexto();
