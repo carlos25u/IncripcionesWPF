@@ -27,43 +27,98 @@ namespace IncripcionesWPF.UI.Registros
             InitializeComponent();
             this.DataContext = profesor;
 
-            MateriaComboBox.ItemsSource = MateriasBLL.GetList();
+            AreaComboBox.ItemsSource = AreasBLL.GetAreas();
+            AreaComboBox.SelectedValuePath = "AreaId";
+            AreaComboBox.DisplayMemberPath = "Descripcion";
+
+            MateriaComboBox.ItemsSource = MateriasBLL.GetMaterias();
             MateriaComboBox.SelectedValuePath = "MateriaId";
             MateriaComboBox.DisplayMemberPath = "Nombre";
 
-            AreaComboBox.ItemsSource = AreasBLL.GetAreas();
-            MateriaComboBox.SelectedValuePath = "AreaId";
-            MateriaComboBox.DisplayMemberPath = "Descripcion";
+          
+        }
+
+        private void Cargar()
+        {
+            this.DataContext = null;
+            this.DataContext = profesor;
+        }
+
+        private void Limpiar()
+        {
+            this.profesor = new Profesores();
+            this.DataContext = profesor;
+
+            FechaingresoDatePicker.SelectedDate = DateTime.Now;
+
         }
 
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
+            Profesores encontrado = ProfesoresBLL.Buscar(Utilidades.ToInt(ProfesorIdTextBox.Text));
 
+            if (encontrado != null)
+            {
+                profesor = encontrado;
+                Cargar();
+            }
+            else
+            {
+                Limpiar();
+                MessageBox.Show("El proyecto no existe", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void AgregarButton_Click(object sender, RoutedEventArgs e)
         {
+            profesor.Detalle.Add(new ProfesoresDetalle
+            {
+                ProfesorId = profesor.ProfesorId,
+                Materias = (Materias)MateriaComboBox.SelectedItem
+            });
 
+            Cargar();
         }
 
         private void RemoverButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (DetalleDataGrid.Items.Count >= 1 && DetalleDataGrid.SelectedIndex <= DetalleDataGrid.Items.Count - 1)
+            {
+                profesor.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);
+                Cargar();
+            }
         }
 
         private void NuevoButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Limpiar();
         }
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
+            var paso = ProfesoresBLL.Guardar(profesor);
 
+            if (paso)
+            {
+                Limpiar();
+                MessageBox.Show("Guardado con exito", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("No se pudo guardar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
-
+            if (ProfesoresBLL.Eliminar(Utilidades.ToInt(ProfesorIdTextBox.Text)))
+            {
+                MessageBox.Show("Se elimino con exito", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("No fue posible Eliminar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
         }
     }
 }

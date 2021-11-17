@@ -12,7 +12,7 @@
             <Label Content="Profesor Id"></Label>
 
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="ProyectoIdTextBox" Height="18" Width="150" Text="{Binding ProfesorId}"></TextBox>
+                <TextBox x:Name="ProfesorIdTextBox" Height="18" Width="150" Text="{Binding ProfesorId}"></TextBox>
                 <Button x:Name="BuscarButton" Margin="10,0,0,0" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/Buscar.png" Height="18"></Image>
@@ -85,10 +85,9 @@
 
             <DataGrid x:Name="DetalleDataGrid" Margin="0,5,0,0" Height="150" ItemsSource="{Binding Detalle}" IsEnabled="True" AutoGenerateColumns="False">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Profesor" Binding="{Binding }"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Apellidos" Binding="{Binding }"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Codigo teria" Binding="{Binding }"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Materia" Binding="{Binding }"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Apellidos" Binding="{Binding Materias.MateriaId}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Codigo Materia" Binding="{Binding Materias.CodigoMateria}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Materia" Binding="{Binding Materias.Nombre}"></DataGridTextColumn>
                 </DataGrid.Columns>
 
             </DataGrid>

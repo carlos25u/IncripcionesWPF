@@ -129,7 +129,7 @@ namespace IncripcionesWPF.BLL
             return encontrado;
         }
 
-        public static List<Materias> GetList()
+        public static List<Materias> GetMaterias()
         {
             List<Materias> lista = new List<Materias>();
             Contexto contexto = new Contexto();
