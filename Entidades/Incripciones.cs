@@ -14,7 +14,7 @@ namespace IncripcionesWPF.Entidades
         public int IncripcionId { get; set; }
         public int CursoId { get; set; }
         public int EstudianteId { get; set; }
-        public int Fecha { get; set; }
+        public DateTime Fecha { get; set; } = DateTime.Now;
 
         [ForeignKey("CursoId")]
         public Cursos Cursos { get; set; }

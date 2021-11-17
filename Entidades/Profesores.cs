@@ -19,7 +19,7 @@ namespace IncripcionesWPF.Entidades
         public String Celular { get; set; }
         public int AreaId { get; set; }
         public DateTime FechaNacimiento { get; set; }
-        public DateTime FechaIngreso { get; set; }
+        public DateTime FechaIngreso { get; set; } = DateTime.Now;
         public String Correo { get; set; }
 
         [ForeignKey("ProfesorId")]

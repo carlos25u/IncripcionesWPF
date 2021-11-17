@@ -112,8 +112,8 @@ namespace IncripcionesWPF.Migrations
                     b.Property<int>("EstudianteId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Fecha")
-                        .HasColumnType("INTEGER");
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("IncripcionId");
 
@@ -264,7 +264,7 @@ namespace IncripcionesWPF.Migrations
                             UsuarioId = 1,
                             Apellido = "Solorin",
                             Clave = "1234",
-                            FechaCreacion = new DateTime(2021, 11, 17, 11, 27, 47, 822, DateTimeKind.Local).AddTicks(2443),
+                            FechaCreacion = new DateTime(2021, 11, 17, 14, 5, 18, 409, DateTimeKind.Local).AddTicks(2023),
                             Nombre = "Carlos",
                             NombreUsuario = "Admin",
                             RolId = 1

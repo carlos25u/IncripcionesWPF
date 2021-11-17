@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace IncripcionesWPF.Migrations
 {
     [DbContext(typeof(Contexto))]
-    [Migration("20211117152748_Reparando Base de datos")]
-    partial class ReparandoBasededatos
+    [Migration("20211117180518_Reparando")]
+    partial class Reparando
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -114,8 +114,8 @@ namespace IncripcionesWPF.Migrations
                     b.Property<int>("EstudianteId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Fecha")
-                        .HasColumnType("INTEGER");
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("IncripcionId");
 
@@ -266,7 +266,7 @@ namespace IncripcionesWPF.Migrations
                             UsuarioId = 1,
                             Apellido = "Solorin",
                             Clave = "1234",
-                            FechaCreacion = new DateTime(2021, 11, 17, 11, 27, 47, 822, DateTimeKind.Local).AddTicks(2443),
+                            FechaCreacion = new DateTime(2021, 11, 17, 14, 5, 18, 409, DateTimeKind.Local).AddTicks(2023),
                             Nombre = "Carlos",
                             NombreUsuario = "Admin",
                             RolId = 1

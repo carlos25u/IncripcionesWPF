@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace IncripcionesWPF.Migrations
 {
-    public partial class ReparandoBasededatos : Migration
+    public partial class Reparando : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -115,7 +115,7 @@ namespace IncripcionesWPF.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     CursoId = table.Column<int>(type: "INTEGER", nullable: false),
                     EstudianteId = table.Column<int>(type: "INTEGER", nullable: false),
-                    Fecha = table.Column<int>(type: "INTEGER", nullable: false)
+                    Fecha = table.Column<DateTime>(type: "TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -223,7 +223,7 @@ namespace IncripcionesWPF.Migrations
             migrationBuilder.InsertData(
                 table: "Usuarios",
                 columns: new[] { "UsuarioId", "Apellido", "Clave", "FechaCreacion", "Nombre", "NombreUsuario", "RolId" },
-                values: new object[] { 1, "Solorin", "1234", new DateTime(2021, 11, 17, 11, 27, 47, 822, DateTimeKind.Local).AddTicks(2443), "Carlos", "Admin", 1 });
+                values: new object[] { 1, "Solorin", "1234", new DateTime(2021, 11, 17, 14, 5, 18, 409, DateTimeKind.Local).AddTicks(2023), "Carlos", "Admin", 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_CursosDetalle_CursoId",

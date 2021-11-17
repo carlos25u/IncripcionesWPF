@@ -96,6 +96,8 @@ namespace IncripcionesWPF
 
         private void ConsultasIncripcionMenuItem_Click(object sender, RoutedEventArgs e)
         {
+            cIncripciones consultas = new cIncripciones();
+            consultas.Show();
 
         }
 
