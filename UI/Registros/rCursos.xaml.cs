@@ -60,7 +60,7 @@ namespace IncripcionesWPF.UI.Registros
             if (MateriaComboBox.SelectedIndex.ToString() == null)
             {
                 MateriaComboBox.Focus();
-                mensajeValidacion = "El nombre no puede estar vacio";
+                mensajeValidacion = "Debes seleccionar un elemnto de la lista";
             }
             return mensajeValidacion.Length == 0;
 
