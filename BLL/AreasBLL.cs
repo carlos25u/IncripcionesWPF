@@ -157,7 +157,7 @@ namespace IncripcionesWPF.BLL
             return lista;
         }
 
-        public static List<Areas> GetCursos()
+        public static List<Areas> GetAreas()
         {
             List<Areas> lista = new List<Areas>();
             Contexto contexto = new Contexto();

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace IncripcionesWPF.Entidades
 {
-    class CursosDetalle
+    public class CursosDetalle
     {
         [Key]
         public int CursoDetalleId { get; set; }
