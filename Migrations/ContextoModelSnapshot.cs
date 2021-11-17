@@ -47,6 +47,27 @@ namespace IncripcionesWPF.Migrations
                     b.ToTable("Cursos");
                 });
 
+            modelBuilder.Entity("IncripcionesWPF.Entidades.CursosDetalle", b =>
+                {
+                    b.Property<int>("CursoDetalleId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("CursoId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("MateriaId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("CursoDetalleId");
+
+                    b.HasIndex("CursoId");
+
+                    b.HasIndex("MateriaId");
+
+                    b.ToTable("CursosDetalle");
+                });
+
             modelBuilder.Entity("IncripcionesWPF.Entidades.Estudiantes", b =>
                 {
                     b.Property<int>("EstudianteId")
@@ -243,20 +264,30 @@ namespace IncripcionesWPF.Migrations
                             UsuarioId = 1,
                             Apellido = "Solorin",
                             Clave = "1234",
-                            FechaCreacion = new DateTime(2021, 11, 16, 16, 1, 33, 320, DateTimeKind.Local).AddTicks(4207),
+                            FechaCreacion = new DateTime(2021, 11, 17, 11, 27, 47, 822, DateTimeKind.Local).AddTicks(2443),
                             Nombre = "Carlos",
                             NombreUsuario = "Admin",
                             RolId = 1
                         });
                 });
 
-            modelBuilder.Entity("IncripcionesWPF.Entidades.Cursos", b =>
+            modelBuilder.Entity("IncripcionesWPF.Entidades.CursosDetalle", b =>
                 {
-                    b.HasOne("IncripcionesWPF.Entidades.Cursos", null)
+                    b.HasOne("IncripcionesWPF.Entidades.Cursos", "Cursos")
                         .WithMany("Detalle")
                         .HasForeignKey("CursoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("IncripcionesWPF.Entidades.Materias", "Materias")
+                        .WithMany()
+                        .HasForeignKey("MateriaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Cursos");
+
+                    b.Navigation("Materias");
                 });
 
             modelBuilder.Entity("IncripcionesWPF.Entidades.Incripciones", b =>

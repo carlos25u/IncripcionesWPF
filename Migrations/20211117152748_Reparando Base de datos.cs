@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace IncripcionesWPF.Migrations
 {
-    public partial class Arreglandobasededatos : Migration
+    public partial class ReparandoBasededatos : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -135,6 +135,32 @@ namespace IncripcionesWPF.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "CursosDetalle",
+                columns: table => new
+                {
+                    CursoDetalleId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    CursoId = table.Column<int>(type: "INTEGER", nullable: false),
+                    MateriaId = table.Column<int>(type: "INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_CursosDetalle", x => x.CursoDetalleId);
+                    table.ForeignKey(
+                        name: "FK_CursosDetalle_Cursos_CursoId",
+                        column: x => x.CursoId,
+                        principalTable: "Cursos",
+                        principalColumn: "CursoId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_CursosDetalle_Materias_MateriaId",
+                        column: x => x.MateriaId,
+                        principalTable: "Materias",
+                        principalColumn: "MateriaId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Usuarios",
                 columns: table => new
                 {
@@ -197,7 +223,17 @@ namespace IncripcionesWPF.Migrations
             migrationBuilder.InsertData(
                 table: "Usuarios",
                 columns: new[] { "UsuarioId", "Apellido", "Clave", "FechaCreacion", "Nombre", "NombreUsuario", "RolId" },
-                values: new object[] { 1, "Solorin", "1234", new DateTime(2021, 11, 16, 16, 1, 33, 320, DateTimeKind.Local).AddTicks(4207), "Carlos", "Admin", 1 });
+                values: new object[] { 1, "Solorin", "1234", new DateTime(2021, 11, 17, 11, 27, 47, 822, DateTimeKind.Local).AddTicks(2443), "Carlos", "Admin", 1 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CursosDetalle_CursoId",
+                table: "CursosDetalle",
+                column: "CursoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CursosDetalle_MateriaId",
+                table: "CursosDetalle",
+                column: "MateriaId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Incripciones_CursoId",
@@ -232,6 +268,9 @@ namespace IncripcionesWPF.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "CursosDetalle");
+
             migrationBuilder.DropTable(
                 name: "Incripciones");
 
