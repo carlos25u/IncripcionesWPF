@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IncripcionesWPF.UI.Registros"
+        xmlns:PasswordHelper="clr-namespace:IncripcionesWPF.PasswordHelper"
         mc:Ignorable="d"
         Title="Registro de Usuarios" Height="520" Width="400">
     <Grid>
@@ -33,7 +34,9 @@
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Clave"/>
-                    <PasswordBox x:Name="ClavePasswordBox" Width="350" Height="20"/>
+                    <PasswordBox x:Name="ClavePasswordBox" Width="350" Height="20" PasswordHelper:PasswordHelper.Attach="True"
+                                 PasswordHelper:PasswordHelper.Password="{Binding Clave, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
+                                 />
                     <Label Content="Confirmar Clave"/>
                     <PasswordBox x:Name="ConfirmarClavePasswordBox" Width="350" Height="20"/>
                 </StackPanel>

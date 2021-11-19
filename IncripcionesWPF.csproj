@@ -7,13 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="PasswordHelper\**" />
-    <EmbeddedResource Remove="PasswordHelper\**" />
-    <None Remove="PasswordHelper\**" />
-    <Page Remove="PasswordHelper\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="Resources\Agregar.png" />
     <None Remove="Resources\Buscar.png" />
     <None Remove="Resources\Cancelar.png" />
