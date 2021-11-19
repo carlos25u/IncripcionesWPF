@@ -6,9 +6,12 @@
         xmlns:local="clr-namespace:IncripcionesWPF"
         mc:Ignorable="d"
         Icon="/Resources/Inscripcion.ico"
-        Title="Menu Principal" Height="300" Width="600">
+        Title="Menu Principal" WindowStyle="SingleBorderWindow" WindowState="Maximized" Height="300" Width="600">
     <Grid>
         <StackPanel Orientation="Vertical">
+            <StackPanel.Background>
+                <ImageBrush ImageSource="/Resources/Menu.jpg"/>
+            </StackPanel.Background>
             <Menu Height="18">
                 <MenuItem Header="Registros">
                     <MenuItem Header="Usuarios" x:Name="RegistroUsuarioMenuItem" Click="RegistroUsuarioMenuItem_Click"></MenuItem>

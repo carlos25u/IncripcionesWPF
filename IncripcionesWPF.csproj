@@ -21,6 +21,7 @@
     <None Remove="Resources\Guardar.png" />
     <None Remove="Resources\Inscripcion.ico" />
     <None Remove="Resources\Login.png" />
+    <None Remove="Resources\Menu.jpg" />
     <None Remove="Resources\Nuevo.png" />
     <None Remove="Resources\Remover.png" />
   </ItemGroup>
@@ -45,6 +46,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Login.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Menu.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Nuevo.png">
