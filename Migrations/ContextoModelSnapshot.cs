@@ -263,8 +263,8 @@ namespace IncripcionesWPF.Migrations
                         {
                             UsuarioId = 1,
                             Apellido = "Solorin",
-                            Clave = "1234",
-                            FechaCreacion = new DateTime(2021, 11, 17, 14, 5, 18, 409, DateTimeKind.Local).AddTicks(2023),
+                            Clave = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
+                            FechaCreacion = new DateTime(2021, 11, 20, 19, 57, 32, 574, DateTimeKind.Local).AddTicks(4081),
                             Nombre = "Carlos",
                             NombreUsuario = "Admin",
                             RolId = 1

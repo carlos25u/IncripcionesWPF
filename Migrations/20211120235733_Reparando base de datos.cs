@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace IncripcionesWPF.Migrations
 {
-    public partial class Reparando : Migration
+    public partial class Reparandobasededatos : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -223,7 +223,7 @@ namespace IncripcionesWPF.Migrations
             migrationBuilder.InsertData(
                 table: "Usuarios",
                 columns: new[] { "UsuarioId", "Apellido", "Clave", "FechaCreacion", "Nombre", "NombreUsuario", "RolId" },
-                values: new object[] { 1, "Solorin", "1234", new DateTime(2021, 11, 17, 14, 5, 18, 409, DateTimeKind.Local).AddTicks(2023), "Carlos", "Admin", 1 });
+                values: new object[] { 1, "Solorin", "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4", new DateTime(2021, 11, 20, 19, 57, 32, 574, DateTimeKind.Local).AddTicks(4081), "Carlos", "Admin", 1 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_CursosDetalle_CursoId",
