@@ -49,6 +49,7 @@
                         <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}"/>
                         <DataGridTextColumn Header="Celular" Binding="{Binding Celular}"/>
                         <DataGridTextColumn Header="Correo" Binding="{Binding Correo}"/>
+                        <DataGridTextColumn Header="Area Id" Binding="{Binding AreaId}"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>

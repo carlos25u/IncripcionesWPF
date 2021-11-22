@@ -39,7 +39,8 @@
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id Incripcion" Binding="{Binding EstudianteId}"/>
                         <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}"/>
-                        <DataGridTextColumn Header="Nombres" Binding="{Binding Estudiantes.Nombre}"/>
+                        <DataGridTextColumn Header="Estudiante Id" Binding="{Binding EstudianteId}"/>
+                        <DataGridTextColumn Header="Curso Id" Binding="{Binding CursoId}"/>
                         
                     </DataGrid.Columns>
                 </DataGrid>
