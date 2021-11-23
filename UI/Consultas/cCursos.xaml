@@ -21,7 +21,7 @@
                     <Label Content="Criterio: "/>
                     <TextBox x:Name="CriterioTextBox" Width="100"/>
                 </StackPanel>
-                <Button x:Name="BuscarButton"  Click="BuscarButton_Click" Height="28">
+                <Button x:Name="BuscarButton"  Click="BuscarButton_Click" Height="35">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/Buscar.png" Height="18"/>
                         <Label Content="Buscar"/>
