@@ -1,4 +1,12 @@
 ﻿<Window x:Class="IncripcionesWPF.UI.Registros.rProfesores"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -12,7 +20,7 @@
             <Label Content="Profesor Id"></Label>
 
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="ProfesorIdTextBox" Height="18" Width="150" Text="{Binding ProfesorId}"></TextBox>
+                <TextBox x:Name="ProfesorIdTextBox" Height="23" Width="150" Text="{Binding ProfesorId}"></TextBox>
                 <Button x:Name="BuscarButton" Margin="10,0,0,0" Click="BuscarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/Buscar.png" Height="18"></Image>
@@ -22,13 +30,13 @@
             </StackPanel>
 
             <Label Content="Nombres"></Label>
-            <TextBox x:Name="NombreTextBox" Height="18" Text="{Binding Nombres}"></TextBox>
+            <TextBox x:Name="NombreTextBox" Height="23" Text="{Binding Nombres}"></TextBox>
 
             <Label Content="Apellidos"></Label>
-            <TextBox x:Name="ApellidoTextBox" Height="18" Text="{Binding Apellidos}"></TextBox>
+            <TextBox x:Name="ApellidoTextBox" Height="23" Text="{Binding Apellidos}"></TextBox>
 
             <Label Content="Direccion"></Label>
-            <TextBox x:Name="direccionTextBox" Height="18" Text="{Binding Direccion}"></TextBox>
+            <TextBox x:Name="direccionTextBox" Height="23" Text="{Binding Direccion}"></TextBox>
 
             <StackPanel Orientation="Horizontal">
                 <Label Content="Telefono"></Label>
@@ -36,8 +44,8 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="telefonoTextBox" Height="18" Width="144" Text="{Binding Telefono}"></TextBox>
-                <TextBox x:Name="celularTextBox" Height="18" Width="144" Margin="50,0,0,0" Text="{Binding Celular}"></TextBox>
+                <TextBox x:Name="telefonoTextBox" Height="23" Width="144" Text="{Binding Telefono}"></TextBox>
+                <TextBox x:Name="celularTextBox" Height="23" Width="144" Margin="50,0,0,0" Text="{Binding Celular}"></TextBox>
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
@@ -51,7 +59,7 @@
             </StackPanel>
 
             <Label Content="Correo"></Label>
-            <TextBox x:Name="CorreoTextBox" Height="18" Text="{Binding Correo}"></TextBox>
+            <TextBox x:Name="CorreoTextBox" Height="23" Text="{Binding Correo}"></TextBox>
 
             <Label Content="Area"></Label>
             
@@ -103,7 +111,7 @@
                 <Button x:Name="GuardarButton" Margin="10,0,0,0" Click="GuardarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/Guardar.png" Height="18"></Image>
-                        <Label Content="guardar"></Label>
+                        <Label Content="Guardar"></Label>
                     </StackPanel>
                 </Button>
 
