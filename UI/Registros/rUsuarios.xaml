@@ -2,7 +2,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
-        TextElement.FontSize="13"
+        TextElement.FontSize="10"
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
@@ -14,7 +14,7 @@
         xmlns:local="clr-namespace:IncripcionesWPF.UI.Registros"
         xmlns:PasswordHelper="clr-namespace:IncripcionesWPF.PasswordHelper"
         mc:Ignorable="d"
-        Title="Registro de Usuarios" Height="520" Width="400">
+        Title="Registro de Usuarios" Height="530" Width="400">
     <Grid>
         <StackPanel Orientation="Horizontal" Margin="10">
             <StackPanel Orientation="Vertical">
