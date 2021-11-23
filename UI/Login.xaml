@@ -14,12 +14,8 @@
             <TextBox x:Name="NombreUsuarioTextBox" Background="#545d6a"/>
             <Label Content="Contraseña" Foreground="White"/>
             <PasswordBox x:Name="ClavePassWordBox" Background ="#545d6a" FontSize="12"/>
-            
-            
             <StackPanel>
-
-                
-                    <Button x:Name="LoginButton" Height="30" Background="#545d6a" Foreground="White" Click="LoginButton_Click" Width="80" Margin="0,15" >
+                <Button x:Name="LoginButton" Height="30" Background="#545d6a" Foreground="White" Click="LoginButton_Click" Width="80" Margin="0,15" >
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Login" Foreground="White" FontSize ="12"/>
                             <Image Source="/Resources/Login.png" Height="15"/>

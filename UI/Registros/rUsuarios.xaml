@@ -2,7 +2,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
-        TextElement.FontSize="10"
+        TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal" 
         TextOptions.TextRenderingMode="Auto"        
         Background="{DynamicResource MaterialDesignPaper}"
@@ -20,7 +20,7 @@
             <StackPanel Orientation="Vertical">
                 <Label Content="Usuarios Id"/>
                 <StackPanel Orientation="Horizontal" Margin="5,0,0,0">
-                    <TextBox x:Name="UsuarioIdTextBox" Height="20" Width="90" Text="{Binding UsuarioId}"/>
+                    <TextBox x:Name="UsuarioIdTextBox" Height="23" Width="90" Text="{Binding UsuarioId}"/>
                     <Button x:Name="BuscarButton" Margin="10" Click="BuscarButton_Click">
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Buscar"/>
@@ -30,19 +30,19 @@
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Nombre"/>
-                    <TextBox  x:Name="NombreTextBox" Height="20" Width="350" Text="{Binding Nombre}"/>
+                    <TextBox  x:Name="NombreTextBox" Height="23" Width="350" Text="{Binding Nombre}"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Apellido"/>
-                    <TextBox x:Name="ApellidoTextBox" Height="20" Width="350" Text="{Binding Apellido}"/>
+                    <TextBox x:Name="ApellidoTextBox" Height="23" Width="350" Text="{Binding Apellido}"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Nombre de Usuario"/>
-                    <TextBox x:Name="NombreUsuarioTextBox" Height="20" Width="350" Text="{Binding NombreUsuario}"/>
+                    <TextBox x:Name="NombreUsuarioTextBox" Height="23" Width="350" Text="{Binding NombreUsuario}"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Clave"/>
-                    <PasswordBox x:Name="ClavePasswordBox" Width="350" Height="20" PasswordHelper:PasswordHelper.Attach="True"
+                    <PasswordBox x:Name="ClavePasswordBox" Width="350" Height="23" PasswordHelper:PasswordHelper.Attach="True"
                                  PasswordHelper:PasswordHelper.Password="{Binding Clave, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
                                  />
                     <Label Content="Confirmar Clave"/>

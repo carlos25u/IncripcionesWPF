@@ -12,7 +12,7 @@
             <Label Content="Incripcion Id"></Label>
 
             <StackPanel Orientation="Horizontal">
-                <TextBox x:Name="incripcionIdTextBox" Width="100" Height="18" Text="{Binding IncripcionId}"></TextBox>
+                <TextBox x:Name="incripcionIdTextBox" Width="100" Height="23" Text="{Binding IncripcionId}"></TextBox>
 
                 <Button x:Name="BuscarButton" Margin="10,0,0,0" Click="BuscarButton_Click" >
                     <StackPanel Orientation="Horizontal">
