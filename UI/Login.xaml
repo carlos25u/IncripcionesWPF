@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IncripcionesWPF.UI"
         mc:Ignorable="d"
-        Title="Login" Height="335" Width="400" Background= "Black" WindowStartupLocation="CenterScreen">
+        Title="Login" Height="340" Width="400" Background= "Black" WindowStartupLocation="CenterScreen">
     <Border Background ="#2e3137" CornerRadius="20" Margin="20">
         <StackPanel Margin="10">
             <Label Content="Login" Foreground="White" FontSize="25" HorizontalAlignment="Center"/>
@@ -15,14 +15,14 @@
             <Label Content="Contraseña" Foreground="White"/>
             <PasswordBox x:Name="ClavePassWordBox" Background ="#545d6a" FontSize="12"/>
             <StackPanel>
-                <Button x:Name="LoginButton" Height="30" Background="#545d6a" Foreground="White" Click="LoginButton_Click" Width="80" Margin="0,15" >
+                <Button x:Name="LoginButton" Height="35" Background="#545d6a" Foreground="White" Click="LoginButton_Click" Width="100" Margin="0,15" >
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Login" Foreground="White" FontSize ="12"/>
                             <Image Source="/Resources/Login.png" Height="15"/>
                         </StackPanel>
                     </Button>
                
-                <Button x:Name="CancelarButton" Height="30" Background="#545d6a" Foreground="White" Margin="0,0,0,0" Click="CancelarButton_Click" Width="80">
+                <Button x:Name="CancelarButton" Height="35" Background="#545d6a" Foreground="White" Margin="0,0,0,0" Click="CancelarButton_Click" Width="100">
                     <StackPanel Orientation="Horizontal">
                         <Label Content="Cancelar" Foreground="White" FontSize ="12"/>
                         <Image Source="/Resources/Cancelar.png" Height="15"/>
