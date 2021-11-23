@@ -51,7 +51,7 @@
                     </StackPanel>
                 </Button>
             </StackPanel>
-            <DataGrid x:Name="DetalleDataGrid" Margin="0,5,0,0" Height="150" ItemsSource="{Binding Detalle}" IsEnabled="True" AutoGenerateColumns="False">
+            <DataGrid x:Name="DetalleDataGrid" Margin="0,5,0,0" Height="150" ItemsSource="{Binding Detalle}" IsEnabled="True" AutoGenerateColumns="False" Background="LightGray" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Materia Id" Binding="{Binding Materias.MateriaId}"></DataGridTextColumn>
                     <DataGridTextColumn Header="Codigo de la materia" Binding="{Binding Materias.CodigoMateria}"></DataGridTextColumn>
