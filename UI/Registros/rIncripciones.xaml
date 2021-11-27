@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IncripcionesWPF.UI.Registros"
         mc:Ignorable="d"
-        Title="Registros de Incripciones" Height="330" Width="400">
+        Title="Registros de Incripciones" Height="330" Width="430" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
 

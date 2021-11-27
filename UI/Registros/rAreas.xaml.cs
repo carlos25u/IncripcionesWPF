@@ -88,7 +88,7 @@ namespace IncripcionesWPF.UI.Registros
 
         private void EliminarButton_Click(object sender, RoutedEventArgs e)
         {
-            if (RolesBLL.Eliminar(Utilidades.ToInt(AreaIdTextBox.Text)))
+            if (AreasBLL.Eliminar(Utilidades.ToInt(AreaIdTextBox.Text)))
             {
                 Limpiar();
                 MessageBox.Show("Registro Eliminado", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);

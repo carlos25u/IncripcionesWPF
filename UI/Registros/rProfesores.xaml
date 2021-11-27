@@ -13,7 +13,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IncripcionesWPF.UI.Registros"
         mc:Ignorable="d"
-        Title="Registros de Profesores" Height="720" Width="500">
+        Title="Registros de Profesores" Height="730" Width="530" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
 

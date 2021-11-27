@@ -65,7 +65,7 @@ namespace IncripcionesWPF.UI.Registros
             else
             {
                 Limpiar();
-                MessageBox.Show("El proyecto no existe", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("El profesor no existe", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

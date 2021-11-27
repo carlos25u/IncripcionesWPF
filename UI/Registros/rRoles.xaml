@@ -13,7 +13,7 @@
         FontFamily="{DynamicResource MaterialDesignFont}"
         xmlns:local="clr-namespace:IncripcionesWPF.UI.Registros"
         mc:Ignorable="d"
-        Title="Registros de Roles" Height="250" Width="400">
+        Title="Registros de Roles" Height="250" Width="425" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
 

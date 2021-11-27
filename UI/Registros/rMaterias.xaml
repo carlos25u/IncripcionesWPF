@@ -13,7 +13,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IncripcionesWPF.UI.Registros"
         mc:Ignorable="d"
-        Title="Registro de Materias" Height="300" Width="400">
+        Title="Registro de Materias" Height="300" Width="430" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Horizontal" Margin="10">
             <StackPanel Orientation="Vertical">
@@ -29,27 +29,27 @@
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Codigo de la materia"/>
-                    <TextBox  x:Name="CodigoMateriaTextBox" Height="20" Width="350" Text="{Binding CodigoMateria}"/>
+                    <TextBox  x:Name="CodigoMateriaTextBox" Height="20"  Text="{Binding CodigoMateria}"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Nombre de la materia"/>
-                    <TextBox x:Name="NombreMateriaTextBox" Height="20" Width="350" Text="{Binding Nombre}"/>
+                    <TextBox x:Name="NombreMateriaTextBox" Height="20"  Text="{Binding Nombre}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5, 15">
-                    <Button x:Name="NuevoButton" Height="40" Width="80" Click="NuevoButton_Click" Margin="10,0">
+                    <Button x:Name="NuevoButton" Height="40" Width="110" Click="NuevoButton_Click" Margin="10,0">
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Nuevo"/>
                             <Image Source="/Resources/Nuevo.png" Height="20" HorizontalAlignment="Left" />
                         </StackPanel>
                     </Button>
-                    <Button x:Name="GuardarButton" Height="40" Width="80" Click="GuardarButton_Click" Margin="10,0">
+                    <Button x:Name="GuardarButton" Height="40" Width="110" Click="GuardarButton_Click" Margin="10,0">
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Guardar"/>
                             <Image Source="/Resources/Guardar.png" Height="20" HorizontalAlignment="Left"/>
                         </StackPanel>
 
                     </Button>
-                    <Button x:Name="EliminarButton" Height="40" Width="80" Click="EliminarButton_Click" Margin="10,0">
+                    <Button x:Name="EliminarButton" Height="40" Width="110" Click="EliminarButton_Click" Margin="10,0">
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Eliminar"/>
                             <Image Source="/Resources/Eliminar.png" Height="20" HorizontalAlignment="Left"/>

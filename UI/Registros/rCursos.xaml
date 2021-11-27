@@ -13,7 +13,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IncripcionesWPF.UI.Registros"
         mc:Ignorable="d"
-        Title="Regidtro de Cursos" Height="490" Width="450">
+        Title="Regidtro de Cursos" Height="490" Width="450" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
             <Label Content="Curso Id"></Label>

@@ -14,7 +14,7 @@
         xmlns:local="clr-namespace:IncripcionesWPF.UI.Registros"
         xmlns:PasswordHelper="clr-namespace:IncripcionesWPF.PasswordHelper"
         mc:Ignorable="d"
-        Title="Registro de Usuarios" Height="530" Width="400">
+        Title="Registro de Usuarios" Height="530" Width="450" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Horizontal" Margin="10">
             <StackPanel Orientation="Vertical">
@@ -30,46 +30,46 @@
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Nombre"/>
-                    <TextBox  x:Name="NombreTextBox" Height="23" Width="350" Text="{Binding Nombre}"/>
+                    <TextBox  x:Name="NombreTextBox" Height="23" Text="{Binding Nombre}"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Apellido"/>
-                    <TextBox x:Name="ApellidoTextBox" Height="23" Width="350" Text="{Binding Apellido}"/>
+                    <TextBox x:Name="ApellidoTextBox" Height="23" Text="{Binding Apellido}"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Nombre de Usuario"/>
-                    <TextBox x:Name="NombreUsuarioTextBox" Height="23" Width="350" Text="{Binding NombreUsuario}"/>
+                    <TextBox x:Name="NombreUsuarioTextBox" Height="23" Text="{Binding NombreUsuario}"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Clave"/>
-                    <PasswordBox x:Name="ClavePasswordBox" Width="350" Height="23" PasswordHelper:PasswordHelper.Attach="True"
+                    <PasswordBox x:Name="ClavePasswordBox" Height="23" PasswordHelper:PasswordHelper.Attach="True"
                                  PasswordHelper:PasswordHelper.Password="{Binding Clave, Mode=OneWayToSource, UpdateSourceTrigger=PropertyChanged}"
                                  />
                     <Label Content="Confirmar Clave"/>
-                    <PasswordBox x:Name="ConfirmarClavePasswordBox" Width="350" Height="20"/>
+                    <PasswordBox x:Name="ConfirmarClavePasswordBox" Height="20"/>
                 </StackPanel>
                 
                 <StackPanel Orientation="Vertical">
                     <Label Content="Fecha"/>
-                    <DatePicker Name="FechaDatePicker" SelectedDate="{Binding FechaCreacion}" Width="350"/>
+                    <DatePicker Name="FechaDatePicker" SelectedDate="{Binding FechaCreacion}"/>
                     <Label Content="Rol"/>
                     <ComboBox x:Name="UsuarioCombobox" Height="20" SelectedValue="{Binding RolId}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5, 15">
-                    <Button x:Name="NuevoButton" Height="40" Width="80" Click="NuevoButton_Click" Margin="10,0">
+                    <Button x:Name="NuevoButton" Height="40" Width="110" Click="NuevoButton_Click" Margin="10,0">
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Nuevo"/>
                             <Image Source="/Resources/Nuevo.png" Height="20" HorizontalAlignment="Left" />
                         </StackPanel>
                     </Button>
-                    <Button x:Name="GuardarButton" Height="40" Width="80" Click="GuardarButton_Click" Margin="10,0">
+                    <Button x:Name="GuardarButton" Height="40" Width="110" Click="GuardarButton_Click" Margin="10,0">
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Guardar"/>
                             <Image Source="/Resources/Guardar.png" Height="20" HorizontalAlignment="Left"/>
                         </StackPanel>
 
                     </Button>
-                    <Button x:Name="EliminarButton" Height="40" Width="80" Click = "EliminarButton_Click" Margin="10,0">
+                    <Button x:Name="EliminarButton" Height="40" Width="110" Click = "EliminarButton_Click" Margin="10,0">
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Eliminar"/>
                             <Image Source="/Resources/Eliminar.png" Height="20" HorizontalAlignment="Left"/>
