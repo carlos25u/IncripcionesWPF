@@ -25,6 +25,7 @@ namespace IncripcionesWPF.UI.Registros
         public rMaterias()
         {
             InitializeComponent();
+            this.DataContext = materias;    
         }
         private bool Validar()
         {
