@@ -44,6 +44,36 @@ namespace IncripcionesWPF.UI.Registros
             FechaDatePicker.SelectedDate = DateTime.Now;
         }
 
+        private bool Validar()
+        {
+            String mensajeValidacion = "";
+
+            if (FechaDatePicker.Text.Length  == 0)
+            {
+                FechaDatePicker.Focus();
+                mensajeValidacion = "La Fecha no puede estar vacio";
+            }
+
+            if (EstudianteComboxBox.Text.Length == 0)
+            {
+                EstudianteComboxBox.Focus();
+                mensajeValidacion = "Debe de selecionar un Estudiante";
+            }
+
+            if (CursosComboxBox.Text.Length == 0)
+            {
+                CursosComboxBox.Focus();
+                mensajeValidacion = "Debe de selecionar un Curso";
+            }
+
+            if (mensajeValidacion.Length > 0)
+            {
+                MessageBox.Show(mensajeValidacion, "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
+            return mensajeValidacion.Length == 0;
+        }
+
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
             var incripcion = IncripcionesBLL.Buscar(Utilidades.ToInt(incripcionIdTextBox.Text));
@@ -67,6 +97,9 @@ namespace IncripcionesWPF.UI.Registros
 
         private void guardarButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!Validar())
+                return;
+
             var paso = IncripcionesBLL.Guardar(incripcion);
             if (paso)
             {

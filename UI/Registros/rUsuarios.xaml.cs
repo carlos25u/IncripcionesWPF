@@ -64,6 +64,12 @@ namespace IncripcionesWPF.UI.Registros
                 ConfirmarClavePasswordBox.Focus();
                 mensajeValidacion = "La clave de usuario no puede estar vacio";
             }
+
+            if(UsuarioCombobox.Text.Length == 0)
+            {
+                UsuarioCombobox.Focus();
+                mensajeValidacion = "Debe de asignar un Rol";
+            }
             if (mensajeValidacion.Length > 0)
             {
                 MessageBox.Show(mensajeValidacion, "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -98,6 +104,9 @@ namespace IncripcionesWPF.UI.Registros
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!Validar())
+                return;
+
             var paso = UsuariosBLL.Guardar(this.Usuario);
             if (paso)
             {

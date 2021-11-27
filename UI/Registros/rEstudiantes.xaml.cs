@@ -66,7 +66,13 @@ namespace IncripcionesWPF.UI.Registros
             if (string.IsNullOrWhiteSpace(TelefonoTextBox.Text))
             {
                 TelefonoTextBox.Focus();
-                mensajeValidacion = "El telefono no puede estar vaci0";
+                mensajeValidacion = "El telefono no puede estar vacio";
+            }
+
+            if (string.IsNullOrWhiteSpace(CelularTextBox.Text))
+            {
+                CelularTextBox.Focus();
+                mensajeValidacion = "El celular no puede estar vacio";
             }
 
             if (string.IsNullOrWhiteSpace(CorreoTextBox.Text))

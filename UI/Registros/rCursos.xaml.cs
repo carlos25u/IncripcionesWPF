@@ -62,6 +62,11 @@ namespace IncripcionesWPF.UI.Registros
                 MateriaComboBox.Focus();
                 mensajeValidacion = "Debes seleccionar un elemnto de la lista";
             }
+
+            if (mensajeValidacion.Length > 0)
+            {
+                MessageBox.Show(mensajeValidacion, "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
             return mensajeValidacion.Length == 0;
 
         }

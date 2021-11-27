@@ -29,11 +29,11 @@
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Codigo de la materia"/>
-                    <TextBox  x:Name="CodigoMateriaTextBox" Height="20"  Text="{Binding CodigoMateria}"/>
+                    <TextBox  x:Name="CodigoMateriaTextBox" Height="23"  Text="{Binding CodigoMateria}"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Nombre de la materia"/>
-                    <TextBox x:Name="NombreMateriaTextBox" Height="20"  Text="{Binding Nombre}"/>
+                    <TextBox x:Name="NombreMateriaTextBox" Height="23"  Text="{Binding Nombre}"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="5, 15">
                     <Button x:Name="NuevoButton" Height="40" Width="110" Click="NuevoButton_Click" Margin="10,0">

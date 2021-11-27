@@ -34,10 +34,73 @@ namespace IncripcionesWPF.UI.Registros
             MateriaComboBox.ItemsSource = MateriasBLL.GetMaterias();
             MateriaComboBox.SelectedValuePath = "MateriaId";
             MateriaComboBox.DisplayMemberPath = "Nombre";
-
-          
         }
+        private bool Validar()
+        {
+            String mensajeValidacion = "";
 
+            if (string.IsNullOrWhiteSpace(NombreTextBox.Text))
+            {
+                NombreTextBox.Focus();
+                mensajeValidacion = "El nombre no puede estar vacio";
+            }
+
+            if (string.IsNullOrWhiteSpace(ApellidoTextBox.Text))
+            {
+                ApellidoTextBox.Focus();
+                mensajeValidacion = "El apellido no  puede estar vacio";
+            }
+
+            if (string.IsNullOrWhiteSpace(direccionTextBox.Text))
+            {
+                direccionTextBox.Focus();
+                mensajeValidacion = "La direccion no  puede estar vacio";
+            }
+
+            if (telefonoTextBox.Text.Length == 0)
+            {
+                telefonoTextBox.Focus();
+                mensajeValidacion = "El telefono no  puede estar vacio";
+            }
+
+            if (celularTextBox.Text.Length == 0)
+            {
+                celularTextBox.Focus();
+                mensajeValidacion = "El celular no  puede estar vacio";
+            }
+
+            if (FechaingresoDatePicker.Text.Length == 0)
+            {
+                FechaingresoDatePicker.Focus();
+                mensajeValidacion = "La fecha de ingreso no  puede estar vacio";
+            }
+
+            if (FechaNacimientoDatePicker.Text.Length == 0)
+            {
+                FechaNacimientoDatePicker.Focus();
+                mensajeValidacion = "La fecha de nacimiento no  puede estar vacio";
+            }
+
+            if (string.IsNullOrWhiteSpace(CorreoTextBox.Text))
+            {
+                CorreoTextBox.Focus();
+                mensajeValidacion = "El correo no  puede estar vacio";
+            }
+
+            if (AreaComboBox.Text.Length == 0)
+            {
+                AreaComboBox.Focus();
+                mensajeValidacion = "Debe de seleccionar una area";
+            }
+
+            if (mensajeValidacion.Length > 0)
+            {
+                MessageBox.Show(mensajeValidacion, "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
+            return mensajeValidacion.Length == 0;
+
+        }
         private void Cargar()
         {
             this.DataContext = null;
@@ -96,6 +159,9 @@ namespace IncripcionesWPF.UI.Registros
 
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!Validar())
+                return;
+           
             var paso = ProfesoresBLL.Guardar(profesor);
 
             if (paso)

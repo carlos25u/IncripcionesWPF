@@ -37,7 +37,7 @@ namespace IncripcionesWPF.UI.Registros
             if (string.IsNullOrWhiteSpace(NombreMateriaTextBox.Text))
             {
                 NombreMateriaTextBox.Focus();
-                mensajeValidacion = "La clave de usuario no puede estar vacio";
+                mensajeValidacion = "El nombre de la materia no debe estar vacio";
             }
             if (mensajeValidacion.Length > 0)
             {
