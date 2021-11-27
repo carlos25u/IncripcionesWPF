@@ -14,6 +14,7 @@
         xmlns:local="clr-namespace:IncripcionesWPF.UI.Registros"
         xmlns:PasswordHelper="clr-namespace:IncripcionesWPF.PasswordHelper"
         mc:Ignorable="d"
+        Icon="/Resources/Inscripcion.ico"
         Title="Registro de Usuarios" Height="530" Width="450" WindowStartupLocation="CenterScreen">
     <Grid>
         <StackPanel Orientation="Horizontal" Margin="10">

@@ -14,8 +14,8 @@
     <None Remove="Resources\Guardar.png" />
     <None Remove="Resources\Inscripcion.ico" />
     <None Remove="Resources\Login.png" />
-    <None Remove="Resources\Menu.jpg" />
     <None Remove="Resources\Nuevo.png" />
+    <None Remove="Resources\politecnico.png" />
     <None Remove="Resources\Remover.png" />
   </ItemGroup>
 
@@ -41,10 +41,10 @@
     <Content Include="Resources\Login.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Menu.jpg">
+    <Content Include="Resources\Nuevo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Nuevo.png">
+    <Content Include="Resources\politecnico.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Remover.png">

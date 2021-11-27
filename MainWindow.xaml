@@ -13,14 +13,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IncripcionesWPF"
         mc:Ignorable="d"
-        Icon="/Resources/Inscripcion.ico"
-        Title="Menu Principal" WindowStyle="SingleBorderWindow" WindowState="Maximized" Height="300" Width="600">
+        Title="Menu Principal" WindowStyle="SingleBorderWindow" WindowState="Maximized" Height="300" Width="600" Icon="/Resources/politecnico.png">
     <Grid>
         <StackPanel Orientation="Vertical">
             <StackPanel.Background>
-                <ImageBrush ImageSource="/Resources/Menu.jpg"/>
+                <ImageBrush ImageSource="/Resources/politecnico.png"/>
             </StackPanel.Background>
-            <Menu Height="20">
+            <Menu Height="20" Background="LightBlue">
                 <MenuItem Header="Registros" Height="21">
                     <MenuItem Header="Usuarios" x:Name="RegistroUsuarioMenuItem" Click="RegistroUsuarioMenuItem_Click"></MenuItem>
                     <MenuItem Header="Estudiantes" x:Name="RegistroEstudianteMenuItem" Click="RegistroEstudianteMenuItem_Click"></MenuItem>

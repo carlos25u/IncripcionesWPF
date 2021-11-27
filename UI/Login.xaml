@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IncripcionesWPF.UI"
         mc:Ignorable="d"
+         Icon="/Resources/Inscripcion.ico"
         Title="Login" Height="340" Width="400" Background= "Black" WindowStartupLocation="CenterScreen">
     <Border Background ="#2e3137" CornerRadius="20" Margin="20">
         <StackPanel Margin="10">

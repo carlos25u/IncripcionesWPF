@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:IncripcionesWPF.UI.Consultas"
         mc:Ignorable="d"
+        Icon="/Resources/Inscripcion.ico"
         Title="Consultas de Roles" Height="450" Width="500">
     <Grid>
         <StackPanel Orientation="Vertical" Margin="10">
