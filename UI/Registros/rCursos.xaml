@@ -38,7 +38,7 @@
                 <Label Content="Materia"></Label>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
-                <ComboBox x:Name="MateriaComboBox" Height="23" Width="120" SelectedValue="{Binding MateriaId}"/>
+                <ComboBox x:Name="MateriaComboBox" Height="25" Width="120" SelectedValue="{Binding MateriaId}"/>
                 <Button x:Name="AgregarButton" Margin="10,0,0,0" Click="AgregarButton_Click">
                     <StackPanel Orientation="Horizontal">
                         <Image Source="/Resources/Agregar.png" Height="18"></Image>
