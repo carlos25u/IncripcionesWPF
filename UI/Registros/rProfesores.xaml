@@ -56,7 +56,7 @@
             
             <StackPanel Orientation="Horizontal">
                 <DatePicker x:Name="FechaNacimientoDatePicker" SelectedDate="{Binding FechaNacimiento}"></DatePicker>
-                <DatePicker x:Name="FechaingresoDatePicker" SelectedDate="{Binding FechaIngreso}" Margin="50,0,0,0"></DatePicker>
+                <DatePicker x:Name="FechaingresoDatePicker" SelectedDate="{Binding FechaIngreso}" Margin="127,0,0,0"></DatePicker>
             </StackPanel>
 
             <Label Content="Correo"></Label>

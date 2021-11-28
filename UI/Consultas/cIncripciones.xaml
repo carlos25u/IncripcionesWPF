@@ -38,11 +38,10 @@
             <StackPanel HorizontalAlignment="Left">
                 <DataGrid x:Name="DatosDataGrid" Height="300" Width="700" ItemsSource="{Binding Incripciones}" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Id Incripcion" Binding="{Binding EstudianteId}"/>
+                        <DataGridTextColumn Header="Id Incripcion" Binding="{Binding IncripcionId}"/>
                         <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}"/>
                         <DataGridTextColumn Header="Estudiante Id" Binding="{Binding EstudianteId}"/>
                         <DataGridTextColumn Header="Curso Id" Binding="{Binding CursoId}"/>
-                        
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
