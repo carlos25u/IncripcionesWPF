@@ -39,14 +39,14 @@
                 </Button>
             </StackPanel>
             <StackPanel HorizontalAlignment="Left">
-                <DataGrid x:Name="DatosDataGrid" Height="240" Width="586" IsEnabled="False" AutoGenerateColumns="False">
+                <DataGrid x:Name="DatosDataGrid" Height="240" Width="586" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Usuario Id" Binding="{Binding UsuarioId}"/>
-                        <DataGridTextColumn Header="Fecha" Binding="{Binding FechaCreacion}"/>
-                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
-                        <DataGridTextColumn Header="Apellido" Binding="{Binding Apellido}"/>
-                        <DataGridTextColumn Header="Nombre de Usuario" Binding="{Binding NombreUsuario}"/>
-                        <DataGridTextColumn Header="Rol Id" Binding="{Binding RolId}"/>
+                        <DataGridTextColumn Header="Usuario Id" Binding="{Binding UsuarioId}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Fecha" Binding="{Binding FechaCreacion}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Apellido" Binding="{Binding Apellido}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Nombre de Usuario" Binding="{Binding NombreUsuario}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Rol Id" Binding="{Binding RolId}" IsReadOnly="True"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>

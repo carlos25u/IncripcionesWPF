@@ -31,10 +31,10 @@
                 </Button>
             </StackPanel>
             <StackPanel HorizontalAlignment="Left">
-                <DataGrid x:Name="DatosDataGrid" Height="300" IsEnabled="False" Width="450" AutoGenerateColumns="False">
+                <DataGrid x:Name="DatosDataGrid" Height="300" Width="450" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Rol Id" Binding="{Binding RolId}"/>
-                        <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion }"/>
+                        <DataGridTextColumn Header="Rol Id" Binding="{Binding RolId}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion }" IsReadOnly="True"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>

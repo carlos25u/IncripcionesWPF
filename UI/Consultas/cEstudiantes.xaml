@@ -39,16 +39,16 @@
                 </Button>
             </StackPanel>
             <StackPanel HorizontalAlignment="Left">
-                <DataGrid x:Name="DatosDataGrid" Height="300" Width="700" AutoGenerateColumns="False" IsEnabled="False">
+                <DataGrid x:Name="DatosDataGrid" Height="300" Width="700" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Id" Binding="{Binding EstudianteId}"/>
-                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre }"/>
-                        <DataGridTextColumn Header="Apellido" Binding="{Binding Apellido}"/>
-                        <DataGridTextColumn Header="Fecha Nacimiento" Binding="{Binding FechaNacimiento }"/>
-                        <DataGridTextColumn Header="Direccion" Binding="{Binding Direccion}"/>
-                        <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}"/>
-                        <DataGridTextColumn Header="Celular" Binding="{Binding Celular}"/>
-                        <DataGridTextColumn Header="Correo" Binding="{Binding Correo}"/>
+                        <DataGridTextColumn Header="Id" Binding="{Binding EstudianteId}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre }" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Apellido" Binding="{Binding Apellido}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Fecha Nacimiento" Binding="{Binding FechaNacimiento }" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Direccion" Binding="{Binding Direccion}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Celular" Binding="{Binding Celular}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Correo" Binding="{Binding Correo}" IsReadOnly="True"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
