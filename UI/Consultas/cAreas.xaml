@@ -31,7 +31,7 @@
                 </Button>
             </StackPanel>
             <StackPanel HorizontalAlignment="Left">
-                <DataGrid x:Name="DatosDataGrid" Height="300" Width="450" AutoGenerateColumns="False">
+                <DataGrid x:Name="DatosDataGrid" Height="300" Width="450" AutoGenerateColumns="False" IsEnabled="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Area Id" Binding="{Binding AreaId}"/>
                         <DataGridTextColumn Header="Descripcion" Binding="{Binding Descripcion}"/>

@@ -39,7 +39,7 @@
                 </Button>
             </StackPanel>
             <StackPanel HorizontalAlignment="Left">
-                <DataGrid x:Name="DatosDataGrid" Height="300" Width="700" AutoGenerateColumns="False">
+                <DataGrid x:Name="DatosDataGrid" Height="300" Width="700" AutoGenerateColumns="False" IsEnabled="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Id" Binding="{Binding EstudianteId}"/>
                         <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre }"/>
