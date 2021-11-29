@@ -30,7 +30,7 @@
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Codigo de la materia"/>
-                    <TextBox  x:Name="CodigoMateriaTextBox" Height="23"  Text="{Binding CodigoMateria}"/>
+                    <TextBox  x:Name="CodigoMateriaTextBox" Height="24"  Text="{Binding CodigoMateria}"/>
                 </StackPanel>
                 <StackPanel Orientation="Vertical">
                     <Label Content="Nombre de la materia"/>

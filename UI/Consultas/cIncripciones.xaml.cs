@@ -37,6 +37,14 @@ namespace IncripcionesWPF.UI.Consultas
                     case 0:
                         listado = IncripcionesBLL.GetList(e => e.IncripcionId == Utilidades.ToInt(CriterioTextBox.Text));
                         break;
+
+                    case 1:
+                        listado = IncripcionesBLL.GetList(e => e.Estudiantes.EstudianteId == Utilidades.ToInt(CriterioTextBox.Text));
+                        break;
+
+                    case 2:
+                        listado = IncripcionesBLL.GetList(e => e.Cursos.CursoId == Utilidades.ToInt(CriterioTextBox.Text));
+                        break;
                 }
             }
             else
