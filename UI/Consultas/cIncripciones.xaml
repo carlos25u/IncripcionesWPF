@@ -21,7 +21,9 @@
                 <StackPanel Margin="5,0">
                     <Label Content="Filtro: "/>
                     <ComboBox x:Name="FiltroComboBox" Width="100">
-                        <ComboBoxItem Content="Id"/>
+                        <ComboBoxItem Content="Id Incripcion"/>
+                        <ComboBoxItem Content="Id Estudiante"/>
+                        <ComboBoxItem Content="Id Curso"/>
                     </ComboBox>
                 </StackPanel>
                 <StackPanel Margin="5,0">

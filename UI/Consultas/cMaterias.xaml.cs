@@ -37,7 +37,7 @@ namespace IncripcionesWPF.UI.Consultas
                         listado = MateriasBLL.GetList(e => e.Nombre.ToLower().Contains(CriterioTextBox.Text.ToLower()));
                         break;
                     case 1: //Codigo
-                        listado = MateriasBLL.GetList(e => e.CodigoMateria.ToLower().Contains(CriterioTextBox.Text.ToLower()));
+                        listado = MateriasBLL.GetList(e => e.Codigo.ToLower().Contains(CriterioTextBox.Text.ToLower()));
                         break;
                     case 2: //MateriaId
                         listado = MateriasBLL.GetList(e => e.MateriaId == Utilidades.ToInt(CriterioTextBox.Text));
