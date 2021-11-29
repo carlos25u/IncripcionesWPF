@@ -30,7 +30,7 @@
                 </Button>
             </StackPanel>
             <StackPanel HorizontalAlignment="Left">
-                <DataGrid x:Name="DatosDataGrid" Height="240" Width="325" AutoGenerateColumns="False">
+                <DataGrid x:Name="DatosDataGrid" Height="240" Width="345" AutoGenerateColumns="False">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Curso Id" Binding="{Binding CursoId}"/>
                         <DataGridTextColumn Header="Codigo de materia" Binding="{Binding Codigo}"/>

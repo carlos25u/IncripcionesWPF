@@ -11,7 +11,7 @@ namespace IncripcionesWPF.Entidades
     {
         [Key]
         public int MateriaId { get; set; }
-        public String CodigoMateria { get; set; }
+        public String Codigo { get; set; }
         public String Nombre { get; set; }
     }
 }
