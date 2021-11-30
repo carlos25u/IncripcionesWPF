@@ -131,6 +131,25 @@ namespace IncripcionesWPF.BLL
             return encontrado;
         }
 
+        public static bool ExisteNombreUsuario(string usuario)
+        {
+            bool encontrado = false;
+            Contexto contexto = new Contexto();
+            try
+            {
+                encontrado = contexto.Usuarios.Any(e => e.NombreUsuario == usuario);
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return encontrado;
+        }
+
         public static List<Usuarios> GetList()
         {
             List<Usuarios> lista = new List<Usuarios>();

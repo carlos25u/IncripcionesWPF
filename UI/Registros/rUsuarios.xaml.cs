@@ -81,7 +81,26 @@ namespace IncripcionesWPF.UI.Registros
             }
             return mensajeValidacion.Length == 0;
         }
-    
+        private bool ValidarUsuario()
+        {
+            var paso = UsuariosBLL.ExisteNombreUsuario(NombreUsuarioTextBox.Text);
+            String mensajeValidacion = "";
+
+            if (paso)
+            {
+                NombreUsuarioTextBox.Focus();
+                mensajeValidacion = "El nombre de usuario ya existe!";
+            }
+
+            if (mensajeValidacion.Length > 0)
+            {
+                MessageBox.Show(mensajeValidacion, "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
+            return mensajeValidacion.Length == 0;
+        }
+
         public void Limpiar()
         {
             this.Usuario = new Usuarios();
@@ -97,7 +116,8 @@ namespace IncripcionesWPF.UI.Registros
             else
             {
                 this.Usuario = new Usuarios();
-                MessageBox.Show("No se ha encontrado", "Error", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("No se ha encontrado", "Error", 
+                    MessageBoxButton.OK, MessageBoxImage.Information);
             }
             this.DataContext = this.Usuario;
         }
@@ -111,16 +131,20 @@ namespace IncripcionesWPF.UI.Registros
         {
             if (!Validar())
                 return;
+            if (!ValidarUsuario())
+                return;
 
             var paso = UsuariosBLL.Guardar(this.Usuario);
             if (paso)
             {
                 Limpiar();
-                MessageBox.Show("Se ha guardado exitosamente", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Se ha guardado exitosamente", "Exito", 
+                    MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                MessageBox.Show("No se ha guardado exitosamente", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("No se ha guardado exitosamente", "Error", 
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
