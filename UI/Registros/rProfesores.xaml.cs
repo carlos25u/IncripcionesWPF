@@ -99,8 +99,39 @@ namespace IncripcionesWPF.UI.Registros
             }
 
             return mensajeValidacion.Length == 0;
-
         }
+
+        private bool ValidarDetalle()
+        {
+            String mensajeValidacion = "";
+
+            if (MateriaComboBox.Text.Length == 0)
+            {
+                MateriaComboBox.Focus();
+                mensajeValidacion = "Debes seleccionar una materia";
+            }
+            if (mensajeValidacion.Length > 0)
+            {
+                MessageBox.Show(mensajeValidacion, "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            return mensajeValidacion.Length == 0;
+        }
+        private bool ValidarRemover()
+        {
+            String mensajeValidacion = "";
+
+            if (DetalleDataGrid.SelectedItem == null)
+            {
+                DetalleDataGrid.Focus();
+                mensajeValidacion = "Debes seleccionar una materia para remover";
+            }
+            if (mensajeValidacion.Length > 0)
+            {
+                MessageBox.Show(mensajeValidacion, "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            return mensajeValidacion.Length == 0;
+        }
+
         private void Cargar()
         {
             this.DataContext = null;
@@ -134,6 +165,8 @@ namespace IncripcionesWPF.UI.Registros
 
         private void AgregarButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!ValidarDetalle())
+                return;
             profesor.Detalle.Add(new ProfesoresDetalle
             {
                 ProfesorId = profesor.ProfesorId,
@@ -145,6 +178,8 @@ namespace IncripcionesWPF.UI.Registros
 
         private void RemoverButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!ValidarRemover())
+                return;
             if (DetalleDataGrid.Items.Count >= 1 && DetalleDataGrid.SelectedIndex <= DetalleDataGrid.Items.Count - 1)
             {
                 profesor.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);
