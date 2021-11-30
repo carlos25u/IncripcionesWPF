@@ -65,12 +65,12 @@ namespace IncripcionesWPF.UI.Registros
                 mensajeValidacion = "La clave de usuario no puede estar vacio";
             }
 
-            if(ClavePasswordBox.Password != ConfirmarClavePasswordBox.Password)
+            if (ClavePasswordBox.Password != ConfirmarClavePasswordBox.Password)
             {
                 mensajeValidacion = "Las claves no coinciden";
             }
 
-            if(UsuarioCombobox.Text.Length == 0)
+            if (UsuarioCombobox.Text.Length == 0)
             {
                 UsuarioCombobox.Focus();
                 mensajeValidacion = "Debe de asignar un Rol";
@@ -100,7 +100,23 @@ namespace IncripcionesWPF.UI.Registros
 
             return mensajeValidacion.Length == 0;
         }
+        private bool ValidarUsuarioRol()
+        {
+            var paso = UsuariosBLL.ExisteRol(UsuarioCombobox.Text); 
+            String mensajeValidacion = "";
+            if (paso)
+            {
+                UsuarioCombobox.Focus();
+                mensajeValidacion = "El Rol ya existe!";
+            }
 
+            if (mensajeValidacion.Length > 0)
+            {
+                MessageBox.Show(mensajeValidacion, "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            return mensajeValidacion.Length == 0;
+        }
         public void Limpiar()
         {
             this.Usuario = new Usuarios();
@@ -116,7 +132,7 @@ namespace IncripcionesWPF.UI.Registros
             else
             {
                 this.Usuario = new Usuarios();
-                MessageBox.Show("No se ha encontrado", "Error", 
+                MessageBox.Show("No se ha encontrado", "Error",
                     MessageBoxButton.OK, MessageBoxImage.Information);
             }
             this.DataContext = this.Usuario;
@@ -133,17 +149,19 @@ namespace IncripcionesWPF.UI.Registros
                 return;
             if (!ValidarUsuario())
                 return;
+            if (!ValidarUsuarioRol())
+                return;
 
             var paso = UsuariosBLL.Guardar(this.Usuario);
             if (paso)
             {
                 Limpiar();
-                MessageBox.Show("Se ha guardado exitosamente", "Exito", 
+                MessageBox.Show("Se ha guardado exitosamente", "Exito",
                     MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                MessageBox.Show("No se ha guardado exitosamente", "Error", 
+                MessageBox.Show("No se ha guardado exitosamente", "Error",
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }

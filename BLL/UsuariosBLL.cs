@@ -130,6 +130,25 @@ namespace IncripcionesWPF.BLL
             }
             return encontrado;
         }
+        public static bool ExisteRol(string descripcion)
+        {
+            Contexto contexto = new Contexto();
+            bool encontrado = false;
+
+            try
+            {
+                encontrado = contexto.Usuarios.Any(e => e.Roles.Descripcion == descripcion);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return encontrado;
+        }
 
         public static bool ExisteNombreUsuario(string usuario)
         {
