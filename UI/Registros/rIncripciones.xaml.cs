@@ -74,6 +74,26 @@ namespace IncripcionesWPF.UI.Registros
             return mensajeValidacion.Length == 0;
         }
 
+        private bool ValidarEstudiante()
+        {
+            var paso = IncripcionesBLL.ExisteEstudiante(EstudianteComboxBox.Text);
+            String mensajeValidacion = "";
+
+            if (paso)
+            {
+                EstudianteComboxBox.Focus();
+                mensajeValidacion = "El ya esta incripto";
+            }
+
+            if (mensajeValidacion.Length > 0)
+            {
+                MessageBox.Show(mensajeValidacion, "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
+            return mensajeValidacion.Length == 0;
+        }
+
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
             var incripcion = IncripcionesBLL.Buscar(Utilidades.ToInt(incripcionIdTextBox.Text));
@@ -98,6 +118,9 @@ namespace IncripcionesWPF.UI.Registros
         private void guardarButton_Click(object sender, RoutedEventArgs e)
         {
             if (!Validar())
+                return;
+
+            if (!ValidarEstudiante())
                 return;
 
             var paso = IncripcionesBLL.Guardar(incripcion);

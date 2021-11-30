@@ -89,6 +89,25 @@ namespace IncripcionesWPF.BLL
             return paso;
         }
 
+        public static bool ExisteEstudiante(String nombre)
+        {
+            bool encontrado = false;
+            Contexto contexto = new Contexto();
+            try
+            {
+                encontrado = contexto.Incripciones.Any(e => e.Estudiantes.Nombre == nombre);
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return encontrado;
+        }
+
         public static bool Eliminar(int id)
         {
             bool paso = false;

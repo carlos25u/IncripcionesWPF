@@ -65,7 +65,25 @@ namespace IncripcionesWPF.BLL
             }
 
             return paso;
+        }
 
+        public static bool ExisteCorreo(string correo)
+        {
+            bool encontrado = false;
+            Contexto contexto = new Contexto();
+            try
+            {
+                encontrado = contexto.Estudiantes.Any(e => e.Correo == correo);
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return encontrado;
         }
         public static bool Modificar(Estudiantes estudiante)
         {
