@@ -82,7 +82,7 @@ namespace IncripcionesWPF.UI.Registros
             if (paso)
             {
                 EstudianteComboxBox.Focus();
-                mensajeValidacion = "El ya esta incripto";
+                mensajeValidacion = "El estudiante ya esta incripto";
             }
 
             if (mensajeValidacion.Length > 0)
