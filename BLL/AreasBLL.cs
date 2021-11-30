@@ -32,6 +32,24 @@ namespace IncripcionesWPF.BLL
 
             return encontrado;
         }
+        public static bool ExisteArea(string Descripcion)
+        {
+            bool encontrado = false;
+            Contexto contexto = new Contexto();
+            try
+            {
+                encontrado = contexto.Areas.Any(e => e.Descripcion == Descripcion);
+            }
+            catch(Exception)
+            {
+
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return encontrado;
+        }
 
         public static bool Guardar(Areas area)
         {
