@@ -26,8 +26,46 @@ namespace IncripcionesWPF.DAL
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
-        { 
-            
+        {
+            modelBuilder.Entity<Materias>().HasData(new Materias
+            {
+                MateriaId = 1,
+                Codigo = "Mat-302",
+                Nombre = "Matematicas"
+            }
+            );
+
+            modelBuilder.Entity<Estudiantes>().HasData(new Estudiantes
+            {
+                EstudianteId = 1,
+                Nombre = "Carlos",
+                Apellido = "Lopez",
+                FechaNacimiento = DateTime.Now,
+                Direccion = "Villa tapia",
+                Telefono = "809-887-3454",
+                Celular = "809-433-2344",
+                Correo = "Carlos@gmail.com"
+            }
+            );
+
+            modelBuilder.Entity<Cursos>().HasData(new Cursos
+            {
+                CursoId = 1,
+                Codigo = "Inf-200",
+                Nombre = "Informatica",
+              
+            }
+           );
+
+            modelBuilder.Entity<Incripciones>().HasData(new Incripciones
+            {
+                IncripcionId = 1,
+                EstudianteId = 1,
+                CursoId = 1,
+                Fecha = DateTime.Now
+            }
+           );
+
             modelBuilder.Entity<Roles>().HasData(new Roles
             {
               RolId = 1,
@@ -42,6 +80,27 @@ namespace IncripcionesWPF.DAL
             }
            );
 
+            modelBuilder.Entity<Areas>().HasData(new Areas
+            {
+                AreaId = 1,
+                Descripcion = "Biologia"
+            }
+          );
+
+            modelBuilder.Entity<Profesores>().HasData(new Profesores
+            {
+                ProfesorId = 1,
+                Nombres = "Johan",
+                Apellidos = "Lopez",
+                Direccion = "Cenovi",
+                Telefono = "908-234-1234",
+                Celular = "890-123-3343",
+                AreaId = 1,
+                FechaIngreso = DateTime.Now,
+                FechaNacimiento = DateTime.Now,
+                Correo = "Johan@gmail.com"
+            }
+          );
 
             modelBuilder.Entity<Usuarios>().HasData(new Usuarios
             {
@@ -55,8 +114,6 @@ namespace IncripcionesWPF.DAL
                 RolId = 1
             }
             );
-
-          
         }
     }
 }

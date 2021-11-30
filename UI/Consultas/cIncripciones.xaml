@@ -40,10 +40,10 @@
             <StackPanel HorizontalAlignment="Left">
                 <DataGrid x:Name="DatosDataGrid" Height="300" Width="700" ItemsSource="{Binding Incripciones}" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Id Incripcion" Binding="{Binding IncripcionId}"/>
-                        <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}"/>
-                        <DataGridTextColumn Header="Estudiante Id" Binding="{Binding EstudianteId}"/>
-                        <DataGridTextColumn Header="Curso Id" Binding="{Binding CursoId}"/>
+                        <DataGridTextColumn Header="Id Incripcion" Binding="{Binding IncripcionId}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Fecha" Binding="{Binding Fecha}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Estudiante Id" Binding="{Binding EstudianteId}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Curso Id" Binding="{Binding CursoId}" IsReadOnly="True"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>

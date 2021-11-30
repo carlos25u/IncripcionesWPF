@@ -41,16 +41,16 @@
             <StackPanel HorizontalAlignment="Left">
                 <DataGrid x:Name="DatosDataGrid" Height="300" Width="700" ItemsSource="{Binding Profesores}" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Id" Binding="{Binding  ProfesorId}"/>
-                        <DataGridTextColumn Header="Nombres" Binding="{Binding Nombres }"/>
-                        <DataGridTextColumn Header="Apellido" Binding="{Binding Apellidos}"/>
-                        <DataGridTextColumn Header="Fecha Nacimientos" Binding="{Binding FechaNacimiento }"/>
-                        <DataGridTextColumn Header="Fecha Ingreso" Binding="{Binding FechaIngreso }"/>
-                        <DataGridTextColumn Header="Direccion" Binding="{Binding Direccion}"/>
-                        <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}"/>
-                        <DataGridTextColumn Header="Celular" Binding="{Binding Celular}"/>
-                        <DataGridTextColumn Header="Correo" Binding="{Binding Correo}"/>
-                        <DataGridTextColumn Header="Area Id" Binding="{Binding AreaId}"/>
+                        <DataGridTextColumn Header="Id" Binding="{Binding  ProfesorId}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Nombres" Binding="{Binding Nombres }" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Apellido" Binding="{Binding Apellidos}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Fecha Nacimientos" Binding="{Binding FechaNacimiento }" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Fecha Ingreso" Binding="{Binding FechaIngreso }" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Direccion" Binding="{Binding Direccion}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Telefono" Binding="{Binding Telefono}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Celular" Binding="{Binding Celular}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Correo" Binding="{Binding Correo}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Area Id" Binding="{Binding AreaId}" IsReadOnly="True"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>

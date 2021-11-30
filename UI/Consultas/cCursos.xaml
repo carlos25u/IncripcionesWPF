@@ -32,9 +32,9 @@
             <StackPanel HorizontalAlignment="Left">
                 <DataGrid x:Name="DatosDataGrid" Height="240" Width="345" AutoGenerateColumns="False">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Curso Id" Binding="{Binding CursoId}"/>
-                        <DataGridTextColumn Header="Codigo de materia" Binding="{Binding Codigo}"/>
-                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}"/>
+                        <DataGridTextColumn Header="Curso Id" Binding="{Binding CursoId}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Codigo de materia" Binding="{Binding Codigo}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" IsReadOnly="True"/>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>
