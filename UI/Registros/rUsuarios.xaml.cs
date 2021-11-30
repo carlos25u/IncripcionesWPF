@@ -65,6 +65,11 @@ namespace IncripcionesWPF.UI.Registros
                 mensajeValidacion = "La clave de usuario no puede estar vacio";
             }
 
+            if(ClavePasswordBox.Password != ConfirmarClavePasswordBox.Password)
+            {
+                mensajeValidacion = "Las claves no coinciden";
+            }
+
             if(UsuarioCombobox.Text.Length == 0)
             {
                 UsuarioCombobox.Focus();
