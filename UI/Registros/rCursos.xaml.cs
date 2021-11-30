@@ -37,6 +37,37 @@ namespace IncripcionesWPF.UI.Registros
             this.DataContext = null;
             this.DataContext = cursos;
         }
+
+        private bool ValidarDetalle()
+        {
+            String mensajeValidacion = "";
+
+            if (MateriaComboBox.Text.Length == 0)
+            {
+                MateriaComboBox.Focus();
+                mensajeValidacion = "Debes seleccionar una materia";
+            }
+            if (mensajeValidacion.Length > 0)
+            {
+                MessageBox.Show(mensajeValidacion, "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            return mensajeValidacion.Length == 0;
+        }
+        private bool ValidarRemover()
+        {
+            String mensajeValidacion = "";
+
+            if (DetalleDataGrid.SelectedItem == null)
+            {
+                DetalleDataGrid.Focus();
+                mensajeValidacion = "Debes seleccionar una materia para remover";
+            }
+            if (mensajeValidacion.Length > 0)
+            {
+                MessageBox.Show(mensajeValidacion, "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+            return mensajeValidacion.Length == 0;
+        }
         private void Limpiar()
         {
             this.cursos = new Cursos();
@@ -56,13 +87,6 @@ namespace IncripcionesWPF.UI.Registros
                 NombreTextBox.Focus();
                 mensajeValidacion = "El nombre no  puede estar vacio";
             }
-
-            if (MateriaComboBox.SelectedIndex.ToString() == null)
-            {
-                MateriaComboBox.Focus();
-                mensajeValidacion = "Debes seleccionar un elemnto de la lista";
-            }
-
             if (mensajeValidacion.Length > 0)
             {
                 MessageBox.Show(mensajeValidacion, "Fallo", MessageBoxButton.OK, MessageBoxImage.Warning);
@@ -88,6 +112,9 @@ namespace IncripcionesWPF.UI.Registros
 
         private void AgregarButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!ValidarDetalle())
+                return;
+
             cursos.Detalle.Add(new CursosDetalle
             {
                 CursoId = cursos.CursoId,
@@ -99,6 +126,8 @@ namespace IncripcionesWPF.UI.Registros
 
         private void RemoverButton_Click(object sender, RoutedEventArgs e)
         {
+            if (!ValidarRemover())
+                return;
             if (DetalleDataGrid.Items.Count >= 1 && DetalleDataGrid.SelectedIndex <= DetalleDataGrid.Items.Count - 1)
             {
                 cursos.Detalle.RemoveAt(DetalleDataGrid.SelectedIndex);

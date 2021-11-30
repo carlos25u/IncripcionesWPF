@@ -75,7 +75,7 @@
             </StackPanel>
 
             <StackPanel Orientation="Horizontal">
-                <ComboBox x:Name="MateriaComboBox" Height="20" Width="120" SelectedValue="{Binding MateriaId}"></ComboBox>
+                <ComboBox x:Name="MateriaComboBox" Height="25" Width="120" SelectedValue="{Binding MateriaId}"></ComboBox>
                 
                 <Button x:Name="AgregarButton" Margin="10,0,0,0" Click="AgregarButton_Click">
                     <StackPanel Orientation="Horizontal">
@@ -92,11 +92,11 @@
                 </Button>
             </StackPanel>
 
-            <DataGrid x:Name="DetalleDataGrid" Margin="0,5,0,0" Height="150" ItemsSource="{Binding Detalle}" IsEnabled="True" AutoGenerateColumns="False" Background="LightGray">
+            <DataGrid x:Name="DetalleDataGrid" Margin="0,5,0,0" Height="150" ItemsSource="{Binding Detalle}" AutoGenerateColumns="False" Background="LightGray">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Apellidos" Binding="{Binding Materias.MateriaId}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Codigo Materia" Binding="{Binding Materias.CodigoMateria}"></DataGridTextColumn>
-                    <DataGridTextColumn Header="Materia" Binding="{Binding Materias.Nombre}"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Apellidos" Binding="{Binding Materias.MateriaId}" IsReadOnly="True"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Codigo Materia" Binding="{Binding Materias.Codigo}" IsReadOnly="True"></DataGridTextColumn>
+                    <DataGridTextColumn Header="Materia" Binding="{Binding Materias.Nombre}" IsReadOnly="True"></DataGridTextColumn>
                 </DataGrid.Columns>
 
             </DataGrid>
