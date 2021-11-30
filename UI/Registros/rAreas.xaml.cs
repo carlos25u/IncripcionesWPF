@@ -49,6 +49,26 @@ namespace IncripcionesWPF.UI.Registros
 
             return mensajeValidacion.Length == 0;
         }
+        private bool ValidarDescripcion()
+        {
+            var paso = AreasBLL.ExisteArea(DescripcionTextBox.Text);
+            String mensajeValidacion = "";
+
+            if (paso)
+            {
+                DescripcionTextBox.Focus();
+                mensajeValidacion = "El area ya Existe!";
+            }
+
+            if (mensajeValidacion.Length > 0)
+            {
+                MessageBox.Show(mensajeValidacion, "Fallo", 
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
+
+            return mensajeValidacion.Length == 0;
+        }
+
         private void BuscarButton_Click(object sender, RoutedEventArgs e)
         {
             var areas = AreasBLL.Buscar(Utilidades.ToInt(AreaIdTextBox.Text));
@@ -74,15 +94,20 @@ namespace IncripcionesWPF.UI.Registros
             if (!Validar())
                 return;
 
+            if (!ValidarDescripcion())
+                return;
+
             var paso = AreasBLL.Guardar(areas);
             if (paso)
             {
                 Limpiar();
-                MessageBox.Show("Guardado con exito", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Guardado con exito", "Exito",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                MessageBox.Show("No se pudo guardar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("No se pudo guardar", "Fallo", 
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -91,11 +116,13 @@ namespace IncripcionesWPF.UI.Registros
             if (AreasBLL.Eliminar(Utilidades.ToInt(AreaIdTextBox.Text)))
             {
                 Limpiar();
-                MessageBox.Show("Registro Eliminado", "Exito", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("Registro Eliminado", "Exito",
+                    MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                MessageBox.Show("No fue posible Eliminar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("No fue posible Eliminar", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }
