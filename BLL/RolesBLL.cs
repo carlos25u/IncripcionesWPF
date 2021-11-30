@@ -45,6 +45,25 @@ namespace IncripcionesWPF.BLL
             }
         }
 
+        public static bool ExisteRoles(string Descripcion)
+        {
+            bool encontrado = false;
+            Contexto contexto = new Contexto();
+            try
+            {
+                encontrado = contexto.Roles.Any(e => e.Descripcion == Descripcion);
+            }
+            catch (Exception)
+            {
+
+            }
+            finally
+            {
+                contexto.Dispose();
+            }
+            return encontrado;
+        }
+
         private static bool Insertar(Roles role)
         {
             bool paso = false;
