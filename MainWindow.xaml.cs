@@ -130,5 +130,11 @@ namespace IncripcionesWPF
             DetallesProfesores detalles = new DetallesProfesores();
             detalles.Show();
         }
+
+        private void DetallesCursos_Click(object sender, RoutedEventArgs e)
+        {
+            cCursosDetalle cursos = new cCursosDetalle();
+            cursos.Show();
+        }
     }
 }
