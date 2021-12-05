@@ -100,27 +100,6 @@ namespace IncripcionesWPF.UI.Registros
 
             return mensajeValidacion.Length == 0;
         }
-
-        private bool ValidarCorreo()
-        {
-            var paso = ProfesoresBLL.ExisteCorreo(CorreoTextBox.Text);
-            String mensajeValidacion = "";
-
-            if (paso)
-            {
-                CorreoTextBox.Focus();
-                mensajeValidacion = "El Correo Existe";
-            }
-
-            if (mensajeValidacion.Length > 0)
-            {
-                MessageBox.Show(mensajeValidacion, "Fallo",
-                    MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
-
-            return mensajeValidacion.Length == 0;
-        }
-
         private bool ValidarDetalle()
         {
             String mensajeValidacion = "";
@@ -215,9 +194,6 @@ namespace IncripcionesWPF.UI.Registros
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
             if (!Validar())
-                return;
-
-            if (!ValidarCorreo())
                 return;
            
             var paso = ProfesoresBLL.Guardar(profesor);
