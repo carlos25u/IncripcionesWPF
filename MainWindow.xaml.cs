@@ -124,5 +124,11 @@ namespace IncripcionesWPF
             cAreas areas = new cAreas();
             areas.Show();
         }
+
+        private void DetallesProfesores_Click(object sender, RoutedEventArgs e)
+        {
+            DetallesProfesores detalles = new DetallesProfesores();
+            detalles.Show();
+        }
     }
 }

@@ -40,6 +40,7 @@
                     <MenuItem Header="Areas" x:Name="ConsultasAreasMenuItem" Click="ConsultasAreasMenuItem_Click"></MenuItem>
                     <MenuItem Header="Materias" x:Name="ConsultasMateriasMenuItem" Click="ConsultasMateriasMenuItem_Click"></MenuItem>
                     <MenuItem Header="Roles" x:Name="ConsultasRolesMenuItem" Click="ConsultasRolesMenuItem_Click"></MenuItem>
+                    <MenuItem Header="Detalles profesores" x:Name="DetallesProfesores" Click="DetallesProfesores_Click"></MenuItem>
                 </MenuItem>
             </Menu>
         </StackPanel>
