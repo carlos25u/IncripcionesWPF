@@ -18,7 +18,7 @@ namespace IncripcionesWPF.DAL
         public DbSet<Cursos> Cursos { get; set; }
         public DbSet<Materias> Materias { get; set; }
         public DbSet<Areas> Areas { get; set; }
-
+        public DbSet<CursosDetalle> CursosDetalle { get; set; }
         public DbSet<ProfesoresDetalle> ProfesoresDetalle { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
