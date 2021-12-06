@@ -1,18 +1,7 @@
 ﻿using IncripcionesWPF.BLL;
 using IncripcionesWPF.Entidades;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace IncripcionesWPF.UI.Registros
 {
@@ -38,7 +27,7 @@ namespace IncripcionesWPF.UI.Registros
         {
             String mensajeValidacion = "";
 
-            
+
             if (FechaNacimientoDatePicker.Text.Length == 0)
             {
                 FechaNacimientoDatePicker.Focus();
@@ -74,16 +63,20 @@ namespace IncripcionesWPF.UI.Registros
                 CelularTextBox.Focus();
                 mensajeValidacion = "El celular no puede estar vacio";
             }
-
+            if (CelularTextBox.Text.Length != 13)
+            {
+                CelularTextBox.Focus();
+                mensajeValidacion = "Debe de darle formato al celular";
+            }
             if (string.IsNullOrWhiteSpace(CorreoTextBox.Text))
             {
                 TelefonoTextBox.Focus();
                 mensajeValidacion = "El Correo no puede estar vacio";
             }
 
-            if(mensajeValidacion.Length > 0)
+            if (mensajeValidacion.Length > 0)
             {
-                MessageBox.Show(mensajeValidacion, "Fallo", 
+                MessageBox.Show(mensajeValidacion, "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Warning);
             }
 
@@ -119,12 +112,12 @@ namespace IncripcionesWPF.UI.Registros
             if (paso)
             {
                 Limpiar();
-                MessageBox.Show("Guardado con exito", "Exito", 
+                MessageBox.Show("Guardado con exito", "Exito",
                     MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
             {
-                MessageBox.Show("No se pudo guardar", "Fallo", 
+                MessageBox.Show("No se pudo guardar", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
@@ -134,14 +127,41 @@ namespace IncripcionesWPF.UI.Registros
             if (EstudiantesBLL.Eliminar(Utilidades.ToInt(EstudianteIdTextBox.Text)))
             {
                 Limpiar();
-                MessageBox.Show("Registro Eliminado", "Exito", 
+                MessageBox.Show("Registro Eliminado", "Exito",
                     MessageBoxButton.OK, MessageBoxImage.Information);
 
             }
             else
             {
-                MessageBox.Show("No fue posible Eliminar", "Fallo", 
+                MessageBox.Show("No fue posible Eliminar", "Fallo",
                     MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+        private void CelularTextBox_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
+
+            if (ascci >= 48 && ascci <= 57) e.Handled = false;
+
+            else e.Handled = true;
+
+            if (ascci == 45)
+            {
+                e.Handled = false;
+            }
+        }
+        private void TelefonoTextBox_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+
+            int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
+
+            if (ascci >= 48 && ascci <= 57) e.Handled = false;
+
+            else e.Handled = true;
+
+            if (ascci == 45)
+            {
+                e.Handled = false;
             }
         }
     }
