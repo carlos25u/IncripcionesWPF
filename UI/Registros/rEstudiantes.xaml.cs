@@ -141,13 +141,13 @@ namespace IncripcionesWPF.UI.Registros
         {
             int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
 
-            if (ascci >= 48 && ascci <= 57) e.Handled = false;
-
-            else e.Handled = true;
-
-            if (ascci == 45)
-            {
+            if (ascci >= 48 && ascci <= 57 ||ascci == 45)
                 e.Handled = false;
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Este caracter no es permitido!", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
         private void TelefonoTextBox_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
@@ -155,14 +155,15 @@ namespace IncripcionesWPF.UI.Registros
 
             int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
 
-            if (ascci >= 48 && ascci <= 57) e.Handled = false;
-
-            else e.Handled = true;
-
-            if (ascci == 45)
-            {
+            if (ascci >= 48 && ascci <= 57 || ascci == 45) 
                 e.Handled = false;
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Este caracter no es permitido!", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+
         }
     }
 }

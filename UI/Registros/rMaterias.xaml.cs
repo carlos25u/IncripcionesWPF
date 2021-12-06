@@ -46,44 +46,7 @@ namespace IncripcionesWPF.UI.Registros
             }
             return mensajeValidacion.Length == 0;
         }
-        private bool ValidarMateria()
-        {
-            var paso = MateriasBLL.ExisteCodigo(CodigoMateriaTextBox.Text);
-            String mensajeValidacion = "";
 
-            if (paso)
-            {
-                CodigoMateriaTextBox.Focus();
-                mensajeValidacion = "Este codigo de la materia ya existe!";
-            }
-
-            if (mensajeValidacion.Length > 0)
-            {
-                MessageBox.Show(mensajeValidacion, "Fallo",
-                    MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
-
-            return mensajeValidacion.Length == 0;
-        }
-        private bool VAlidarNombre()
-        {
-            var paso = MateriasBLL.ExisteNombre(NombreMateriaTextBox.Text);
-            String mensajeValidacion = "";
-
-            if (paso)
-            {
-                NombreMateriaTextBox.Focus();
-                mensajeValidacion = "Ya existe esta materia!";
-            }
-
-            if (mensajeValidacion.Length > 0)
-            {
-                MessageBox.Show(mensajeValidacion, "Fallo",
-                    MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
-
-            return mensajeValidacion.Length == 0;
-        }
         public void Limpiar()
         {
             this.materias = new Materias();
@@ -113,10 +76,6 @@ namespace IncripcionesWPF.UI.Registros
         private void GuardarButton_Click(object sender, RoutedEventArgs e)
         {
             if (!Validar())
-                return;
-            if (!ValidarMateria())
-                return;
-            if(!VAlidarNombre())
                 return;
 
             var paso = MateriasBLL.Guardar(this.materias);

@@ -195,7 +195,7 @@ namespace IncripcionesWPF.UI.Registros
         {
             if (!Validar())
                 return;
-           
+
             var paso = ProfesoresBLL.Guardar(profesor);
 
             if (paso)
@@ -225,29 +225,30 @@ namespace IncripcionesWPF.UI.Registros
         {
             int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
 
-            if (ascci >= 48 && ascci <= 57)
+            if (ascci >= 48 && ascci <= 57 || ascci == 45)
                 e.Handled = false;
-            else
-                e.Handled = true;
 
-            if (ascci == 45)
+            else
             {
-                e.Handled = false;
+                e.Handled = true;
+                MessageBox.Show("Este caracter no es permitido!", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
         private void celularTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
 
-            if (ascci >= 48 && ascci <= 57)
+            if (ascci >= 48 && ascci <= 57 || ascci == 45)
                 e.Handled = false;
             else
-                e.Handled = true;
-
-            if (ascci == 45)
             {
-                e.Handled = false;
+                e.Handled = true;
+                MessageBox.Show("Este caracter no es permitido!", "Fallo",
+                    MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+
+
         }
     }
 }

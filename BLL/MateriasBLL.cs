@@ -128,44 +128,6 @@ namespace IncripcionesWPF.BLL
             }
             return encontrado;
         }
-        public static bool ExisteCodigo(string codigo)
-        {
-            bool encontrado = false;
-            Contexto contexto = new Contexto();
-            try
-            {
-                encontrado = contexto.Materias.Any(e => e.Codigo == codigo);
-            }
-            catch (Exception)
-            {
-
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-            return encontrado;
-        }
-
-        public static bool ExisteNombre(string nombre)
-        {
-            bool encontrado = false;
-            Contexto contexto = new Contexto();
-            try
-            {
-                encontrado = contexto.Materias.Any(e => e.Nombre == nombre);
-            }
-            catch (Exception)
-            {
-
-            }
-            finally
-            {
-                contexto.Dispose();
-            }
-            return encontrado;
-        }
-
         public static List<Materias> GetMaterias()
         {
             List<Materias> lista = new List<Materias>();

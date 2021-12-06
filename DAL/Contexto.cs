@@ -195,33 +195,6 @@ namespace IncripcionesWPF.DAL
             }
            );
 
-            modelBuilder.Entity<Incripciones>().HasData(new Incripciones
-            {
-                IncripcionId = 3,
-                EstudianteId = 3,
-                CursoId = 3,
-                Fecha = DateTime.Now
-            }
-           );
-
-            modelBuilder.Entity<Incripciones>().HasData(new Incripciones
-            {
-                IncripcionId = 4,
-                EstudianteId = 4,
-                CursoId = 4,
-                Fecha = DateTime.Now
-            }
-           );
-
-            modelBuilder.Entity<Incripciones>().HasData(new Incripciones
-            {
-                IncripcionId = 5,
-                EstudianteId = 5,
-                CursoId = 5,
-                Fecha = DateTime.Now
-            }
-           );
-
             modelBuilder.Entity<Roles>().HasData(new Roles
             {
               RolId = 1,
