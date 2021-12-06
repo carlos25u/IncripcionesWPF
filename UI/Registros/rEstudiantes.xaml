@@ -43,10 +43,10 @@
             <TextBox x:Name="direccionTextBox" Text="{Binding Direccion}"></TextBox>
 
             <Label Content="Telefono"></Label>
-            <TextBox x:Name="TelefonoTextBox" Text="{Binding Telefono}"></TextBox>
+            <TextBox x:Name="TelefonoTextBox" Text="{Binding Telefono}" PreviewTextInput="TelefonoTextBox_PreviewTextInput"></TextBox>
 
             <Label Content="Celular"></Label>
-            <TextBox x:Name="CelularTextBox" Text="{Binding Celular}"></TextBox>
+            <TextBox x:Name="CelularTextBox" Text="{Binding Celular}" PreviewTextInput="CelularTextBox_PreviewTextInput"></TextBox>
 
             <Label Content="Correo"></Label>
             <TextBox x:Name="CorreoTextBox" Text="{Binding Correo}"></TextBox>

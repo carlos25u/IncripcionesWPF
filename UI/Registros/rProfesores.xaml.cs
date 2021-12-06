@@ -220,5 +220,34 @@ namespace IncripcionesWPF.UI.Registros
                 MessageBox.Show("No fue posible Eliminar", "Fallo", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private void telefonoTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
+
+            if (ascci >= 48 && ascci <= 57)
+                e.Handled = false;
+            else
+                e.Handled = true;
+
+            if (ascci == 45)
+            {
+                e.Handled = false;
+            }
+        }
+        private void celularTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            int ascci = Convert.ToInt32(Convert.ToChar(e.Text));
+
+            if (ascci >= 48 && ascci <= 57)
+                e.Handled = false;
+            else
+                e.Handled = true;
+
+            if (ascci == 45)
+            {
+                e.Handled = false;
+            }
+        }
     }
 }
