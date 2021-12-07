@@ -195,6 +195,33 @@ namespace IncripcionesWPF.DAL
             }
            );
 
+            modelBuilder.Entity<Incripciones>().HasData(new Incripciones
+            {
+                IncripcionId = 3,
+                EstudianteId = 3,
+                CursoId = 3,
+                Fecha = DateTime.Now
+            }
+           );
+
+            modelBuilder.Entity<Incripciones>().HasData(new Incripciones
+            {
+                IncripcionId = 4,
+                EstudianteId = 4,
+                CursoId = 4,
+                Fecha = DateTime.Now
+            }
+           );
+
+            modelBuilder.Entity<Incripciones>().HasData(new Incripciones
+            {
+                IncripcionId = 5,
+                EstudianteId = 5,
+                CursoId = 5,
+                Fecha = DateTime.Now
+            }
+           );
+
             modelBuilder.Entity<Roles>().HasData(new Roles
             {
               RolId = 1,
@@ -401,6 +428,86 @@ namespace IncripcionesWPF.DAL
                 RolId = 5
             }
            );
+
+            modelBuilder.Entity<ProfesoresDetalle>().HasData(new ProfesoresDetalle
+            {
+                ProfesorDetalleId = 1,
+                ProfesorId = 1,
+                MateriaId = 1
+            }
+           );
+
+            modelBuilder.Entity<ProfesoresDetalle>().HasData(new ProfesoresDetalle
+            {
+                ProfesorDetalleId = 2,
+                ProfesorId = 1,
+                MateriaId = 2
+            }
+          );
+
+            modelBuilder.Entity<ProfesoresDetalle>().HasData(new ProfesoresDetalle
+            {
+                ProfesorDetalleId = 3,
+                ProfesorId = 1,
+                MateriaId = 3
+            }
+          );
+
+            modelBuilder.Entity<ProfesoresDetalle>().HasData(new ProfesoresDetalle
+            {
+                ProfesorDetalleId = 4,
+                ProfesorId = 1,
+                MateriaId = 4
+            }
+          );
+
+            modelBuilder.Entity<ProfesoresDetalle>().HasData(new ProfesoresDetalle
+            {
+                ProfesorDetalleId = 5,
+                ProfesorId = 1,
+                MateriaId = 5
+            }
+          );
+
+            modelBuilder.Entity<CursosDetalle>().HasData(new CursosDetalle
+            {
+                CursoDetalleId = 1,
+                CursoId = 1,
+                MateriaId = 1
+            }
+          );
+
+            modelBuilder.Entity<CursosDetalle>().HasData(new CursosDetalle
+            {
+                CursoDetalleId = 2,
+                CursoId = 1,
+                MateriaId = 2
+            }
+          );
+
+            modelBuilder.Entity<CursosDetalle>().HasData(new CursosDetalle
+            {
+                CursoDetalleId = 3,
+                CursoId = 1,
+                MateriaId = 3
+            }
+          );
+
+            modelBuilder.Entity<CursosDetalle>().HasData(new CursosDetalle
+            {
+                CursoDetalleId = 4,
+                CursoId = 1,
+                MateriaId = 4
+            }
+          );
+
+            modelBuilder.Entity<CursosDetalle>().HasData(new CursosDetalle
+            {
+                CursoDetalleId = 5,
+                CursoId = 1,
+                MateriaId = 5
+            }
+          );
         }
     }
 }

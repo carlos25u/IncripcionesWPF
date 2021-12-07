@@ -3,14 +3,16 @@ using System;
 using IncripcionesWPF.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace IncripcionesWPF.Migrations
 {
     [DbContext(typeof(Contexto))]
-    partial class ContextoModelSnapshot : ModelSnapshot
+    [Migration("20211207000025_Agregando Detalle a profesores")]
+    partial class AgregandoDetalleaprofesores
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -125,38 +127,6 @@ namespace IncripcionesWPF.Migrations
                     b.HasIndex("MateriaId");
 
                     b.ToTable("CursosDetalle");
-
-                    b.HasData(
-                        new
-                        {
-                            CursoDetalleId = 1,
-                            CursoId = 1,
-                            MateriaId = 1
-                        },
-                        new
-                        {
-                            CursoDetalleId = 2,
-                            CursoId = 1,
-                            MateriaId = 2
-                        },
-                        new
-                        {
-                            CursoDetalleId = 3,
-                            CursoId = 1,
-                            MateriaId = 3
-                        },
-                        new
-                        {
-                            CursoDetalleId = 4,
-                            CursoId = 1,
-                            MateriaId = 4
-                        },
-                        new
-                        {
-                            CursoDetalleId = 5,
-                            CursoId = 1,
-                            MateriaId = 5
-                        });
                 });
 
             modelBuilder.Entity("IncripcionesWPF.Entidades.Estudiantes", b =>
@@ -198,7 +168,7 @@ namespace IncripcionesWPF.Migrations
                             Celular = "809-433-2344",
                             Correo = "Carlos@gmail.com",
                             Direccion = "Villa tapia",
-                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 5, 37, 824, DateTimeKind.Local).AddTicks(9489),
+                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 0, 24, 678, DateTimeKind.Local).AddTicks(5901),
                             Nombre = "Carlos",
                             Telefono = "809-887-3454"
                         },
@@ -209,7 +179,7 @@ namespace IncripcionesWPF.Migrations
                             Celular = "809-123-4563",
                             Correo = "Pedro@gmail.com",
                             Direccion = "Cenovi",
-                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 5, 37, 825, DateTimeKind.Local).AddTicks(1895),
+                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 0, 24, 678, DateTimeKind.Local).AddTicks(7514),
                             Nombre = "Pedro",
                             Telefono = "809-543-2344"
                         },
@@ -220,7 +190,7 @@ namespace IncripcionesWPF.Migrations
                             Celular = "809-233-2343",
                             Correo = "Luis@gmail.com",
                             Direccion = "Porquero",
-                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 5, 37, 825, DateTimeKind.Local).AddTicks(1922),
+                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 0, 24, 678, DateTimeKind.Local).AddTicks(7534),
                             Nombre = "Luis",
                             Telefono = "809-654-2344"
                         },
@@ -231,7 +201,7 @@ namespace IncripcionesWPF.Migrations
                             Celular = "809-123-5432",
                             Correo = "Johan03@gmail.com",
                             Direccion = "Salcedo",
-                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 5, 37, 825, DateTimeKind.Local).AddTicks(1943),
+                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 0, 24, 678, DateTimeKind.Local).AddTicks(7548),
                             Nombre = "Johan",
                             Telefono = "809-543-2343"
                         },
@@ -242,7 +212,7 @@ namespace IncripcionesWPF.Migrations
                             Celular = "809-654-2343",
                             Correo = "Joel@gmail.com",
                             Direccion = "Tenares",
-                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 5, 37, 825, DateTimeKind.Local).AddTicks(1963),
+                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 0, 24, 678, DateTimeKind.Local).AddTicks(7559),
                             Nombre = "Joel",
                             Telefono = "809-098-4322"
                         });
@@ -277,35 +247,14 @@ namespace IncripcionesWPF.Migrations
                             IncripcionId = 1,
                             CursoId = 1,
                             EstudianteId = 1,
-                            Fecha = new DateTime(2021, 12, 6, 20, 5, 37, 825, DateTimeKind.Local).AddTicks(6301)
+                            Fecha = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(793)
                         },
                         new
                         {
                             IncripcionId = 2,
                             CursoId = 2,
                             EstudianteId = 2,
-                            Fecha = new DateTime(2021, 12, 6, 20, 5, 37, 825, DateTimeKind.Local).AddTicks(6936)
-                        },
-                        new
-                        {
-                            IncripcionId = 3,
-                            CursoId = 3,
-                            EstudianteId = 3,
-                            Fecha = new DateTime(2021, 12, 6, 20, 5, 37, 825, DateTimeKind.Local).AddTicks(7011)
-                        },
-                        new
-                        {
-                            IncripcionId = 4,
-                            CursoId = 4,
-                            EstudianteId = 4,
-                            Fecha = new DateTime(2021, 12, 6, 20, 5, 37, 825, DateTimeKind.Local).AddTicks(7075)
-                        },
-                        new
-                        {
-                            IncripcionId = 5,
-                            CursoId = 5,
-                            EstudianteId = 5,
-                            Fecha = new DateTime(2021, 12, 6, 20, 5, 37, 825, DateTimeKind.Local).AddTicks(7134)
+                            Fecha = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(1196)
                         });
                 });
 
@@ -406,8 +355,8 @@ namespace IncripcionesWPF.Migrations
                             Celular = "809-123-3343",
                             Correo = "Johan@gmail.com",
                             Direccion = "Cenovi",
-                            FechaIngreso = new DateTime(2021, 12, 6, 20, 5, 37, 826, DateTimeKind.Local).AddTicks(4571),
-                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 5, 37, 826, DateTimeKind.Local).AddTicks(4966),
+                            FechaIngreso = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(5956),
+                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(6218),
                             Nombres = "Johan",
                             Telefono = "849-234-1234"
                         },
@@ -419,8 +368,8 @@ namespace IncripcionesWPF.Migrations
                             Celular = "829-123-5432",
                             Correo = "Juan@gmail.com",
                             Direccion = "Cenovi",
-                            FechaIngreso = new DateTime(2021, 12, 6, 20, 5, 37, 826, DateTimeKind.Local).AddTicks(6113),
-                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 5, 37, 826, DateTimeKind.Local).AddTicks(6114),
+                            FechaIngreso = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(6846),
+                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(6847),
                             Nombres = "Juan",
                             Telefono = "829-098-5243"
                         },
@@ -432,8 +381,8 @@ namespace IncripcionesWPF.Migrations
                             Celular = "829-126-0156",
                             Correo = "Jorgelis@gmail.com",
                             Direccion = "Tenares",
-                            FechaIngreso = new DateTime(2021, 12, 6, 20, 5, 37, 826, DateTimeKind.Local).AddTicks(6148),
-                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 5, 37, 826, DateTimeKind.Local).AddTicks(6149),
+                            FechaIngreso = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(6868),
+                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(6869),
                             Nombres = "Jorgelis",
                             Telefono = "829-543-4421"
                         },
@@ -445,8 +394,8 @@ namespace IncripcionesWPF.Migrations
                             Celular = "829-454-8567",
                             Correo = "Mariam@gmail.com",
                             Direccion = "Salcedo",
-                            FechaIngreso = new DateTime(2021, 12, 6, 20, 5, 37, 826, DateTimeKind.Local).AddTicks(6176),
-                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 5, 37, 826, DateTimeKind.Local).AddTicks(6177),
+                            FechaIngreso = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(6941),
+                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(6942),
                             Nombres = "Mariam",
                             Telefono = "829-123-0134"
                         },
@@ -458,8 +407,8 @@ namespace IncripcionesWPF.Migrations
                             Celular = "829-0345-6422",
                             Correo = "Maira@gmail.com",
                             Direccion = "Villa Tapia",
-                            FechaIngreso = new DateTime(2021, 12, 6, 20, 5, 37, 826, DateTimeKind.Local).AddTicks(6201),
-                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 5, 37, 826, DateTimeKind.Local).AddTicks(6202),
+                            FechaIngreso = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(6960),
+                            FechaNacimiento = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(6961),
                             Nombres = "Maira",
                             Telefono = "829-345-1309"
                         });
@@ -502,18 +451,6 @@ namespace IncripcionesWPF.Migrations
                         {
                             ProfesorDetalleId = 3,
                             MateriaId = 3,
-                            ProfesorId = 1
-                        },
-                        new
-                        {
-                            ProfesorDetalleId = 4,
-                            MateriaId = 4,
-                            ProfesorId = 1
-                        },
-                        new
-                        {
-                            ProfesorDetalleId = 5,
-                            MateriaId = 5,
                             ProfesorId = 1
                         });
                 });
@@ -595,7 +532,7 @@ namespace IncripcionesWPF.Migrations
                             UsuarioId = 1,
                             Apellido = "Solorin",
                             Clave = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
-                            FechaCreacion = new DateTime(2021, 12, 6, 20, 5, 37, 826, DateTimeKind.Local).AddTicks(9104),
+                            FechaCreacion = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(8630),
                             Nombre = "Carlos",
                             NombreUsuario = "Admin",
                             RolId = 1
@@ -605,7 +542,7 @@ namespace IncripcionesWPF.Migrations
                             UsuarioId = 2,
                             Apellido = "Lopez",
                             Clave = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
-                            FechaCreacion = new DateTime(2021, 12, 6, 20, 5, 37, 827, DateTimeKind.Local).AddTicks(175),
+                            FechaCreacion = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(9247),
                             Nombre = "Pedro",
                             NombreUsuario = "PedroL",
                             RolId = 2
@@ -615,7 +552,7 @@ namespace IncripcionesWPF.Migrations
                             UsuarioId = 3,
                             Apellido = "Santana",
                             Clave = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
-                            FechaCreacion = new DateTime(2021, 12, 6, 20, 5, 37, 827, DateTimeKind.Local).AddTicks(207),
+                            FechaCreacion = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(9266),
                             Nombre = "Miriam",
                             NombreUsuario = "MiriamS",
                             RolId = 3
@@ -625,7 +562,7 @@ namespace IncripcionesWPF.Migrations
                             UsuarioId = 4,
                             Apellido = "Soto",
                             Clave = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
-                            FechaCreacion = new DateTime(2021, 12, 6, 20, 5, 37, 827, DateTimeKind.Local).AddTicks(232),
+                            FechaCreacion = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(9281),
                             Nombre = "Abelardo",
                             NombreUsuario = "AbelardoS",
                             RolId = 4
@@ -635,7 +572,7 @@ namespace IncripcionesWPF.Migrations
                             UsuarioId = 5,
                             Apellido = "Cruz",
                             Clave = "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4",
-                            FechaCreacion = new DateTime(2021, 12, 6, 20, 5, 37, 827, DateTimeKind.Local).AddTicks(255),
+                            FechaCreacion = new DateTime(2021, 12, 6, 20, 0, 24, 679, DateTimeKind.Local).AddTicks(9294),
                             Nombre = "Randis",
                             NombreUsuario = "RandisC",
                             RolId = 5
